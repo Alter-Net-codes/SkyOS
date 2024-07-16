@@ -28,6 +28,7 @@ while True:
         print("tree - create a value for tree. use the -p command to print the value.")
         print("history - show all command history")
         print("time - see the time in 12hr format")
+        print("shutdown - shut down the system")
     
     elif command == "time":
         # Specify the timezone.
@@ -43,11 +44,9 @@ while True:
         print(current_time)
     
     elif command == "info":
-        print("Developed by the SCA and Alter Net codes. All rights reserved.")
+        print("Developed by the SCA. All rights reserved.")
         print("This kernel may not be reproduced in any way.")
         print("You can archive (make sure the archive is public).")
-        print("v2.0 python3, c23")
-        
     
     elif command == "echo":
         echotxt = input("Echo what: ").strip()
@@ -87,6 +86,26 @@ while True:
         print("Command History:")
         for index, cmd in enumerate(command_history, start=1):
             print(f"{index}: {cmd}")
+
+    elif command == "shutdown":
+        os_choice = input("Are you using Windows or Linux? [W/L]: ").strip().upper()
+        if os_choice == 'W':
+            script_path = os.path.join(os.getcwd(), 'shutdown', 'windowsshutdown.c')
+        elif os_choice == 'L':
+            script_path = os.path.join(os.getcwd(), 'shutdown', 'linuxshutdown.c')
+        else:
+            print("Invalid choice. Please enter 'W' for Windows or 'L' for Linux.")
+            continue
+
+        if os.path.isfile(script_path):
+            try:
+                subprocess.run([sys.executable, script_path], check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Error executing the script: {e}")
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
+        else:
+            print(f"Shutdown script not found in the 'shutdown' directory.")
     
     else:
         print("Not a valid command. Type 'help' for a list of commands.")
