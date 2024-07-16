@@ -3,11 +3,13 @@ import os
 import sys
 from datetime import datetime
 import pytz
+import platform
 
 treevalue = 1
-print("Welcome to the skyOS! Thank you to all those contributors who worked on this!")
+
+print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v2.0 OScore python3")
+print("SkyOS v3.0 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
@@ -23,16 +25,18 @@ while True:
         print("help - show this help message")
         print("info - show information about this program")
         print("echo - echo back what you type")
-        print("helloworld.app - run the helloworld application")
-        print("simpletext.app - run the simple text app by scratch_fakemon!")
+        print("app - run an application")
         print("tree - create a value for tree. use the -p command to print the value.")
         print("history - show all command history")
         print("time - see the time in 12hr format")
         print("shutdown - shut down the system")
+        print("reboot - reboot the system")
+        print("shell - run a shell command")
+        print("applescript - Run AppleScript code (needs a Mac)")
     
     elif command == "time":
         # Specify the timezone.
-        timezone = pytz.timezone('America/Los_Angeles')
+        timezone = pytz.timezone(input("Enter your time zone (for example, 'America/New_York' is best used in US states like Kentucky or New York): "))
 
         # Get the current time in the specified timezone
         now = datetime.now(timezone)
@@ -45,7 +49,7 @@ while True:
     
     elif command == "info":
         print("Developed by the SCA. All rights reserved.")
-        print("This kernel may not be reproduced in any way.")
+        print("This kernel may be reproduced in any way under the MIT License.")
         print("You can archive (make sure the archive is public).")
     
     elif command == "echo":
@@ -58,8 +62,8 @@ while True:
     elif command == "tree -p":
         print(treevalue)
 
-    elif command == "helloworld.app":
-        script_path = os.path.join(apps_dir, 'helloworldapp.py')
+    elif command == "app":
+        script_path = os.path.join(apps_dir, input("Enter the app name: "))
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
@@ -68,44 +72,42 @@ while True:
             except Exception as e:
                 print(f"An unexpected error occurred: {e}")
         else:
-            print("helloworldapp.py not found in the 'apps' directory.")
-      
-    elif command == "simpletext.app":
-        script_path = os.path.join(apps_dir, 'simpletextapp.py')
-        if os.path.isfile(script_path):
-            try:
-                subprocess.run([sys.executable, script_path], check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Error executing the script: {e}")
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
-        else:
-            print("simpletextapp.py not found in the 'apps' directory.")
-    
+            print("App not found in the 'apps' directory.")
     elif command == "history":
         print("Command History:")
         for index, cmd in enumerate(command_history, start=1):
             print(f"{index}: {cmd}")
 
     elif command == "shutdown":
-        os_choice = input("Are you using Windows or Linux? [W/L]: ").strip().upper()
-        if os_choice == 'W':
-            script_path = os.path.join(os.getcwd(), 'shutdown', 'windowsshutdown.c')
-        elif os_choice == 'L':
-            script_path = os.path.join(os.getcwd(), 'shutdown', 'linuxshutdown.c')
+        os_option = input("Are you sure? Type 'yes' to confirm.")
+        if os_option == "yes":
+            if system.platform() == "Darwin":
+                os.system("shutdown -h now")
+            elif system.platform == "Linux":
+                os.system("shutdown -h now")
+            elif system.platform == "Windows":
+                os.system("shutdown /s")
         else:
-            print("Invalid choice. Please enter 'W' for Windows or 'L' for Linux.")
+            print("Shutdown cancelled.")
             continue
-
-        if os.path.isfile(script_path):
-            try:
-                subprocess.run([sys.executable, script_path], check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Error executing the script: {e}")
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
+    elif command == "reboot"
+        os_option = input("Are you sure? Type 'yes' to confirm.")
+        if os_option == "yes":
+            if system.platform() == "Darwin":
+                os.system("shutdown -r now")
+            elif system.platform == "Linux":
+                os.system("shutdown -r now")
+            elif system.platform == "Windows":
+                os.system("shutdown /r")
         else:
-            print(f"Shutdown script not found in the 'shutdown' directory.")
-    
+            print("Reboot cancelled.")
+            continue
+    elif command == "shell":
+        os.system(input("Enter a shell command: "))
+    elif command == "applescript":
+        if platform.system() == "Darwin":
+            os.system("oascript" + input("Enter your AppleScript file or command: "))
+        else:
+            print("You need a Mac for this!")
     else:
-        print("Not a valid command. Type 'help' for a list of commands.")
+        print(command + " is not a valid command. Type 'help' for a list of commands.")
