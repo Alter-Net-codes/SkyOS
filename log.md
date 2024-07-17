@@ -46,5 +46,9 @@ bug fix
 v2.0
 did an update to the copyright notice.
 
+## 7/16/24
+v2.1
+Updated things and changed many parts and added Mac support.
+
 ## stay tuned
 stay tuned for more logs and update info!
