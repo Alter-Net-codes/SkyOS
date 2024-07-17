@@ -85,9 +85,9 @@ while True:
         if os_option == "yes":
             if system.platform() == "Darwin":
                 os.system("shutdown -h now")
-            elif system.platform == "Linux":
+            elif system.platform() == "Linux":
                 os.system("shutdown -h now")
-            elif system.platform == "Windows":
+            elif system.platform() == "Windows":
                 os.system("shutdown /s")
         else:
             print("Shutdown cancelled.")
@@ -97,9 +97,9 @@ while True:
         if os_option == "yes":
             if system.platform() == "Darwin":
                 os.system("shutdown -r now")
-            elif system.platform == "Linux":
+            elif system.platform() == "Linux":
                 os.system("shutdown -r now")
-            elif system.platform == "Windows":
+            elif system.platform() == "Windows":
                 os.system("shutdown /r")
         else:
             print("Reboot cancelled.")
