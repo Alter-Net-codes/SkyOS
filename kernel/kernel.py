@@ -1,3 +1,5 @@
+# skyOS 3.0 (also known as skyOS 2.1) doesn't need C code to shut down the computer.
+
 import subprocess
 import os
 import sys
@@ -9,7 +11,7 @@ treevalue = 1
 
 print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v3.0 OSCore python3")
+print("SkyOS v2.1 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
