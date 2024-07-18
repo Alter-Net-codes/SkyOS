@@ -50,5 +50,13 @@ did an update to the copyright notice.
 v2.1
 Updated things and changed many parts and added Mac support.
 
+## 7/17/24
+v2.2
+syntax error updates
+
+## 7/18/24
+v2.3
+added BIOS and the first version outr of the last 2 ready to realease.
+
 ## stay tuned
 stay tuned for more logs and update info!
