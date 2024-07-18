@@ -1,4 +1,5 @@
-# skyOS 3.0 (also known as skyOS 2.1) doesn't need C code to shut down the computer.
+# skyOS 2.1 doesn't need C code to shut down the computer.
+# why a shell command?
 
 import subprocess
 import os
