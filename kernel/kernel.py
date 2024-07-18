@@ -66,7 +66,7 @@ while True:
         print(treevalue)
 
     elif command == "app":
-        script_path = os.path.join(apps_dir, input("Enter the app name: "))
+        script_path = os.path.join(apps_dir, input("Enter the app name: (with a .py i belive if youre testing this go to the SkyOS repo and tell me if otherwise"))
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
@@ -112,5 +112,19 @@ while True:
             os.system("oascript" + input("Enter your AppleScript file or command: "))
         else:
             print("You need a Mac for this!")
+
+    elif command == "BIOS":
+     script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
+            if os.path.isfile(script_path):
+                try:
+                    subprocess.run([sys.executable, script_path], check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error executing the script: {e}")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
+            else:
+                print("App not found in the 'bios' directory.")
+        
+
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
