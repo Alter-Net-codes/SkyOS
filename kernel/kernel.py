@@ -33,6 +33,7 @@ while True:
         print("reboot - reboot the system")
         print("shell - run a shell command")
         print("applescript - Run AppleScript code (needs a Mac)")
+        print("bios - run the bios")
     
     elif command == "info":
         print("Developed by the SCA. All rights reserved.")
