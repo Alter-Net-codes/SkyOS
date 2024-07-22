@@ -1,6 +1,8 @@
 import os
+import subprocess
+import sys
 
-def exit():
+def exit_app():
     # Path to the kernel script in the KERNEL folder
     kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
     
@@ -14,11 +16,11 @@ def exit():
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
     else:
-        print("yay! sucsess!")
+        print("Kernel script not found. Make sure 'kernel.py' exists in the 'KERNEL' directory.")
 
 def create_file(filename):
     with open(filename, 'w') as file:
-        content = input("Enter content for the file (end with an empty line):\n")
+        print("Enter content for the file (end with an empty line):")
         while True:
             line = input()
             if line == "":
@@ -37,7 +39,7 @@ def read_file(filename):
 def edit_file(filename):
     if os.path.isfile(filename):
         with open(filename, 'a') as file:
-            content = input("Enter content to append to the file (end with an empty line):\n")
+            print("Enter content to append to the file (end with an empty line):")
             while True:
                 line = input()
                 if line == "":
@@ -62,7 +64,8 @@ def main():
             edit_file(filename)
         elif command == "exit":
             print("Exiting TextApp. Goodbye!")
-            exit()
+            exit_app()
+            break  # Add this line to actually exit the loop
         else:
             print("Invalid command. Please enter 'create', 'read', 'edit', or 'exit'.")
 
