@@ -1,5 +1,21 @@
 import os
 
+def exit():
+    # Path to the kernel script in the KERNEL folder
+    kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
+    
+    # Check if the kernel script exists before trying to run it
+    if os.path.isfile(kernel_script):
+        try:
+            # Run the kernel script as a subprocess
+            subprocess.run([sys.executable, kernel_script], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Error executing the kernel script: {e}")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+    else:
+        print("yay! sucsess!")
+
 def create_file(filename):
     with open(filename, 'w') as file:
         content = input("Enter content for the file (end with an empty line):\n")
@@ -46,7 +62,7 @@ def main():
             edit_file(filename)
         elif command == "exit":
             print("Exiting TextApp. Goodbye!")
-            break
+            exit()
         else:
             print("Invalid command. Please enter 'create', 'read', 'edit', or 'exit'.")
 
