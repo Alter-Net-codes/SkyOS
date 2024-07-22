@@ -114,16 +114,16 @@ while True:
             print("You need a Mac for this!")
 
     elif command == "BIOS":
-     script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
-            if os.path.isfile(script_path):
-                try:
-                    subprocess.run([sys.executable, script_path], check=True)
-                except subprocess.CalledProcessError as e:
-                    print(f"Error executing the script: {e}")
-                except Exception as e:
-                    print(f"An unexpected error occurred: {e}")
-            else:
-                print("App not found in the 'bios' directory.")
+    script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
+        if os.path.isfile(script_path):
+            try:
+                subprocess.run([sys.executable, script_path], check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Error executing the script: {e}")
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
+        else:
+            print("App not found in the 'bios' directory.")
         
 
     else:
