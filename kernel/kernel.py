@@ -76,6 +76,7 @@ while True:
                 print(f"An unexpected error occurred: {e}")
         else:
             print("App not found in the 'apps' directory.")
+            
     elif command == "history":
         print("Command History:")
         for index, cmd in enumerate(command_history, start=1):
