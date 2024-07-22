@@ -113,7 +113,7 @@ while True:
         else:
             print("You need a Mac for this!")
 
-    elif command == "BIOS":
+    elif command == "bios":
         script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
         if os.path.isfile(script_path):
             try:
