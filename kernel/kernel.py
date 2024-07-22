@@ -114,7 +114,7 @@ while True:
             print("You need a Mac for this!")
 
     elif command == "BIOS":
-    script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
+        script_path = os.path.join('kernel_dir', 'BIOS_dir', 'BIOS.py')
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
