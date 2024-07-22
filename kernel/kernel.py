@@ -93,7 +93,7 @@ while True:
         else:
             print("Shutdown cancelled.")
             continue
-    elif command == "reboot"
+    elif command == "reboot":
         os_option = input("Are you sure? Type 'yes' to confirm.")
         if os_option == "yes":
             if system.platform() == "Darwin":
