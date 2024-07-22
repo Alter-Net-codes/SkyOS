@@ -4,8 +4,6 @@
 import subprocess
 import os
 import sys
-from datetime import datetime
-import pytz
 import platform
 
 treevalue = 1
@@ -31,24 +29,10 @@ while True:
         print("app - run an application")
         print("tree - create a value for tree. use the -p command to print the value.")
         print("history - show all command history")
-        print("time - see the time in 12hr format")
         print("shutdown - shut down the system")
         print("reboot - reboot the system")
         print("shell - run a shell command")
         print("applescript - Run AppleScript code (needs a Mac)")
-    
-    elif command == "time":
-        # Specify the timezone.
-        timezone = pytz.timezone(input("Enter your time zone (for example, 'America/New_York' is best used in US states like Kentucky or New York): "))
-
-        # Get the current time in the specified timezone
-        now = datetime.now(timezone)
-
-        # Format the date and time as a 12-hour clock with AM/PM
-        current_time = now.strftime("%I:%M %p")
-
-        # Print the current date and time
-        print(current_time)
     
     elif command == "info":
         print("Developed by the SCA. All rights reserved.")
