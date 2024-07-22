@@ -16,7 +16,7 @@ def exit_app():
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
     else:
-        print("Kernel script not found. Make sure 'kernel.py' exists in the 'KERNEL' directory.")
+        print("yay! sucsess!")
 
 def create_file(filename):
     with open(filename, 'w') as file:
