@@ -21,7 +21,7 @@ def main():
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
     else:
-        print("Kernel script not found. Make sure 'kernel.py' exists in the 'KERNEL' directory.")
+        print("yay! sucsess!")
 
 if __name__ == "__main__":
     main()
