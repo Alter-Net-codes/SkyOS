@@ -5,8 +5,11 @@ import subprocess
 import os
 import sys
 import platform
+import panic.py
 
 treevalue = 1
+
+panicErrorCode = None
 
 print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
@@ -14,8 +17,12 @@ print("SkyOS v2.4 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
+BIOS_dir = os.path.join(os.path.dirname(os.getcwd()) + "BIOS")
 
 command_history = []
+
+def panic(errorCode):
+    print("skyOS has crashed. Please restart skyOS. Error code: " + errorCode)
 
 while True:
     command = input("command: ").strip().lower()
@@ -101,7 +108,7 @@ while True:
             print("You need a Mac for this!")
 
     elif command == "bios":
-        script_path = os.path.join('BIOS_dir', 'BIOS.py')
+        script_path = os.path.join(BIOS_dir, 'BIOS.py')
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
@@ -110,7 +117,8 @@ while True:
             except Exception as e:
                 print(f"An unexpected error occurred: {e}")
         else:
-            print("App not found in the 'bios' directory.")
+            panicErrorCode = "MISSING_BIOS"
+            break
     elif command == "java":
         script_path = os.path.join(apps_dir, "interapp-mocha.py")
         if os.path.isfile(script_path):
@@ -125,3 +133,5 @@ while True:
 
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
+
+panic(panicErrorCode)
