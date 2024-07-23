@@ -6,6 +6,7 @@ import os
 import sys
 import platform
 import panic.py
+from panic.py import panic
 
 treevalue = 1
 
@@ -20,9 +21,6 @@ apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
 BIOS_dir = os.path.join(os.path.dirname(os.getcwd()) + "BIOS")
 
 command_history = []
-
-def panic(errorCode):
-    print("skyOS has crashed. Please restart skyOS. Error code: " + errorCode)
 
 while True:
     command = input("command: ").strip().lower()
