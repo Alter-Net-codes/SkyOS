@@ -6,7 +6,7 @@ import os
 import sys
 import platform
 import panic.py
-from panic.py import panic
+from panic.py import *
 
 treevalue = 1
 
