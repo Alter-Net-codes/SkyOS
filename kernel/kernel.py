@@ -10,7 +10,7 @@ treevalue = 1
 
 print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v2.1 OSCore python3")
+print("SkyOS v2.4 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
@@ -34,6 +34,7 @@ while True:
         print("shell - run a shell command")
         print("applescript - Run AppleScript code (needs a Mac)")
         print("bios - run the bios")
+        print("java - run a JAR with InterApp Mocha")
     
     elif command == "info":
         print("Developed by the SCA. All rights reserved.")
@@ -51,7 +52,7 @@ while True:
         print(treevalue)
 
     elif command == "app":
-        script_path = os.path.join(apps_dir, input("Enter the app name: (with a .py i belive if youre testing this go to the SkyOS repo and tell me if otherwise"))
+        script_path = os.path.join(apps_dir, input("Enter the app name: "), ".py")
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
@@ -110,7 +111,17 @@ while True:
                 print(f"An unexpected error occurred: {e}")
         else:
             print("App not found in the 'bios' directory.")
-        
+    elif command == "java":
+        script_path = os.path.join(apps_dir, "interapp-mocha.py")
+        if os.path.isfile(script_path):
+            try:
+                subprocess.run([sys.executable, script_path], check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Error opening InterApp Mocha: {e}")
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
+        else:
+            print("InterApp Mocha not found in the 'apps' directory.")
 
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
