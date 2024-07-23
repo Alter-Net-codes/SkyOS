@@ -1,5 +1,5 @@
 # skyOS 2.1 doesn't need C code to shut down the computer.
-# why a shell command?
+# The "shell" command is to run a shell command on the host device running skyOS.
 
 import subprocess
 import os
