@@ -57,6 +57,8 @@ syntax error updates
 ## 7/18/24
 v2.3
 added BIOS and the first version outr of the last 2 ready to realease.
+v2.4
+Added Java support, InterApp Mocha for launching JARs, and a new "jars" folder for storing JARs (with an included hello-world.jar file).
 
 ## stay tuned
 stay tuned for more logs and update info!
