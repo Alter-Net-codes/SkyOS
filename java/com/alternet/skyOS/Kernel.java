@@ -47,7 +47,7 @@ class Kernel {
         print("app - Load an app (com.example.test is the package name for the test app and TestApp for the test app name).");
         print("echo - Echo some text.")
       }
-      else if (command == "app") {
+      if (command == "app") {
         print("Enter the app name> ");
         appClassPath = scanner.nextLine();
         print("Enter the class file's package name> ");
@@ -65,7 +65,7 @@ class Kernel {
         classVar = null;
         cls = null;
         appClassPath = null;
-      else if (command == "echo") {
+      if (command == "echo") {
         print("What to echo> ");
         echo = scanner.nextLine();
         print(echo);
