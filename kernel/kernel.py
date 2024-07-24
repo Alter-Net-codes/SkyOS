@@ -2,12 +2,13 @@ import subprocess
 import os
 import sys
 import platform
-import panic.py
-from panic.py import *
 
 treevalue = 1
 
 panicErrorCode = None
+
+def panic(errorCode):
+    print(f"skyOS has crashed. Error code: {errorCode}")
 
 print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
