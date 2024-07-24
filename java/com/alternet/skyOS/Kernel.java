@@ -52,7 +52,7 @@ class Kernel {
         appClassPath = scanner.nextLine();
         print("Enter the class file's package name> ");
         appPackageName = scanner.nextLine();
-        file = new File(pwd + appClassPath + ".class");
+        appClass = new File(pwd + appClassPath + ".class");
         url = file.toURI().toURL();
         urls = new URL[]{url};
         classVar = new URLClassLoader(urls);
