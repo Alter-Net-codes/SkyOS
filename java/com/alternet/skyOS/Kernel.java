@@ -58,8 +58,9 @@ class Kernel {
         classVar = new URLClassLoader(urls);
         cls = classVar.loadClass(appPackageName + appClassPath);
         Object classMethod = cls.getDeclaredMethod("appMain");
-        classMethod.appMain();
-        file = null;
+        Object obj = cls.newInstance();
+        String result = (String) method.invoke(obj);
+        appClass = null;
         url = null;
         urls = null;
         classVar = null;
