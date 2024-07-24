@@ -70,5 +70,10 @@ Added a kernel panic function and a few bugfixes.
 v2.4.2
 deleted java support interapp and jars and jar folder
 kept kernel panic BUGFIXESSS!!!!
+
+## 7/24/24
+v3.0.0
+Rewrote skyOS in Java
+
 ## stay tuned
 stay tuned for more logs and update info!
