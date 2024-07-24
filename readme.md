@@ -23,4 +23,4 @@ work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
 
-# skyOS 3 is already out and is a rewrite in Java.
+# skyOS 3 is out! (its in the JAVA folder)
