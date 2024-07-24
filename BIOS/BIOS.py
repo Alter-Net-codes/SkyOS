@@ -2,6 +2,8 @@ import os
 import subprocess
 import sys
  
+kernelState = None
+
 print("SkyOS v2.2 BIOS UPDATE")
 print("This device is running SkyOS")
 print("/kernel/bios")
@@ -29,10 +31,13 @@ def main():
                 except Exception as e:
                     print(f"An unexpected error occurred: {e}")
             else:
-                print("Kernel script not found. Make sure 'kernel.py' exists in the 'KERNEL' directory.")
+                print("No kernel script found.")
+                kernelState = "gone"
             break  # Exit the loop after trying to run the kernel script
         else:
             print("Invalid input. Please type 'yes' or 'no'.")
+if kernelState == "gone":
+ print("The skyOS kernel is missing. Please reinstall skyOS or replace the kernel script,")
 
 if __name__ == "__main__":
     main()
