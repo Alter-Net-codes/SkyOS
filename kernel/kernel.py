@@ -16,7 +16,7 @@ print("SkyOS v2.4 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
-BIOS_dir = os.path.join(os.path.dirname(os.getcwd()) + "BIOS")
+BIOS_location = os.path.join(os.path.dirname(os.getcwd()) + "BIOS")
 
 command_history = []
 
@@ -104,7 +104,7 @@ while True:
             print("You need a Mac for this!")
 
     elif command == "bios":
-        script_path = os.path.join(BIOS_dir, 'BIOS.py')
+        script_path = os.path.join(BIOS_location, 'BIOS.py')
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
