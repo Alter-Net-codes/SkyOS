@@ -16,7 +16,7 @@ print("SkyOS v2.4 OSCore python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
-BIOS_location = os.path.join(os.path.dirname(os.getcwd()) + "BIOS")
+BIOS_location = os.path.join(os.path.dirname(os.getcwd()), "BIOS")
 
 command_history = []
 
@@ -114,13 +114,7 @@ while True:
         else:
             panicErrorCode = "MISSING_BIOS"
             break
-    elif command == "eternal-anger":
-        print("You know, webbrowser11 seriously removed the Java support without even removing the help entry!")
-        print("I helped fix his bugs, but he removed that Java stuff without cleaning things up!")
-        print("Scratch_Fakemon says pastaOS is bad, but at least pastaOS Sedani would be a better quality than skyOS!")
-        print("In fact, how about I rewrite the entirety of skyOS while I'm at it with a higher quality?")
-        print("After all, you could say I am a perfectionist when it comes to my code, and skyOS has many bugs!")
-        print("I literally fixed webbrowser11's bugs and cleaned up his code, yet he removed Java support without cleaning up the rest!")
+            
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
