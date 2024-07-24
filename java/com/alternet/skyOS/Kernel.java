@@ -17,6 +17,8 @@ It is pretty useful, and it can also run apps as .class files as well.
 */
 
 import java.util.Scanner;
+import java.net.URL;
+import java.io.File;
 
 class Kernel {
   public static void print(String text) {
