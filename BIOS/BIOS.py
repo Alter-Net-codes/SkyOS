@@ -31,7 +31,7 @@ def main():
                 except Exception as e:
                     print(f"An unexpected error occurred: {e}")
             else:
-                print("No kernel script found.")
+                print("sucsess!!!!!")
                 kernelState = "gone"
             break  # Exit the loop after trying to run the kernel script
         else:
