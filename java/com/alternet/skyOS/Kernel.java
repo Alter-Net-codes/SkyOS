@@ -34,11 +34,11 @@ class Kernel {
       command = scanner.nextLine();
       if (command == "help") {
         print("help - Show this help list.");
-        print("app - Load an app (com.example.test is the package name for the test app).");
+        print("app - Load an app (com.example.test is the package name for the test app and TestApp for the test app name).");
         print("echo - Echo some text.")
       }
       else if (command == "app") {
-        print("Enter the class file's name> ");
+        print("Enter the app name> ");
         appClassPath = scanner.nextLine();
         print("Enter the class file's package name> ");
         appPackageName = scanner.nextLine();
@@ -46,7 +46,7 @@ class Kernel {
         url = file.toURI().toURL();
         urls = new URL[]{url};
         classVar = new URLClassLoader(urls);
-        cls = classVar.loadClass(appPackageName);
+        cls = classVar.loadClass(appPackageName + appClassPath);
         Object classMethod = cls.getDeclaredMethod("appMain");
         classMethod.appMain();
         file = null;
