@@ -58,11 +58,17 @@ syntax error updates
 v2.3
 added BIOS and the first version outr of the last 2 ready to realease.
 
+## 7/19/24
+v2.4 bugfixes!
+
 ## 7/23/24
-v2.4
-Added Java support, InterApp Mocha for launching JARs, and a new "jars" folder for storing JARs (with an included hello-world.jar file).
 v2.4.1
+Added Java support, InterApp Mocha for launching JARs, and a new "jars" folder for storing JARs (with an included hello-world.jar file).
 Added a kernel panic function and a few bugfixes.
 
+## 7/24/24
+v2.4.2
+deleted java support interapp and jars and jar folder
+kept kernel panic BUGFIXESSS!!!!
 ## stay tuned
 stay tuned for more logs and update info!
