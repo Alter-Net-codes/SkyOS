@@ -20,24 +20,23 @@ package com.alternet.skyOS.Kernel;
 
 import java.util.Scanner;
 
-Scanner scanner = new Scanner(System.in);
-
-File appClass = null;
-URL url = null;
-String command = null;
-String pwd = System.getProperty("user.dir");
-String echo = null;
-String appClassPath = null;
-URL[] urls = null
-ClassLoader classVar = null;
-Class<?> cls = null;
-String appPackageName = null;
-
 class Kernel {
   public static void print(String text) {
     System.out.println(text);
   }
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    File appClass = null;
+    URL url = null;
+    String command = null;
+    String pwd = System.getProperty("user.dir");
+    String echo = null;
+    String appClassPath = null;
+    URL[] urls = null
+    ClassLoader classVar = null;
+    Class<?> cls = null;
+    String appPackageName = null;
     while (True) {
       print("Welcome to skyOS!");
       print("skyOS v3.0");
@@ -72,7 +71,7 @@ class Kernel {
         print(echo);
       }
       else:
-        print("Invalid command. Type 'help' for help.")
+        print("Invalid command. Type 'help' for help.");
       }
     }
   }
