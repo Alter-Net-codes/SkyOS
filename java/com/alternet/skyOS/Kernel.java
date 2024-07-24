@@ -31,7 +31,7 @@ class Kernel {
     String pwd = System.getProperty("user.dir");
     String echo = null;
     String appClassPath = null;
-    URL[] urls = null
+    URL[] urls = null;
     ClassLoader classVar = null;
     Class<?> cls = null;
     String appPackageName = null;
@@ -43,7 +43,7 @@ class Kernel {
       if (command == "help") {
         print("help - Show this help list.");
         print("app - Load an app (com.example.test is the package name for the test app and TestApp for the test app name).");
-        print("echo - Echo some text.")
+        print("echo - Echo some text.");
       }
       if (command == "app") {
         print("Enter the app name> ");
@@ -68,8 +68,6 @@ class Kernel {
         echo = scanner.nextLine();
         print(echo);
       }
-      else:
-        print("Invalid command. Type 'help' for help.");
       }
     }
   }
