@@ -117,18 +117,6 @@ while True:
         else:
             panicErrorCode = "MISSING_BIOS"
             break
-    elif command == "java":
-        script_path = os.path.join(apps_dir, "interapp-mocha.py")
-        if os.path.isfile(script_path):
-            try:
-                subprocess.run([sys.executable, script_path], check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Error opening InterApp Mocha: {e}")
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
-        else:
-            print("InterApp Mocha not found in the 'apps' directory.")
-
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
