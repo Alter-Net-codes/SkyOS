@@ -43,7 +43,7 @@ class Kernel {
       switch (command) {
         case "help":
           print("help - Show this help list.");
-          print("app - Load an app (com.example.test is the package name for the test app and TestApp for the test app name).");
+          print("app - Load an app (com.example.test.TestApp is the name of the TestApp class for the test app).");
           print("echo - Echo some text.");
           break;
         case "app":
