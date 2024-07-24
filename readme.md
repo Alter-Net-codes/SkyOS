@@ -22,3 +22,5 @@ also for more infromation on cotributing!
 work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
+
+# watch out for the new SkyOS java edition!
