@@ -16,7 +16,7 @@ that runs in the JVM.
 It is pretty useful, and it can also run apps as .class files as well.
 */
 
-package com.alternet.skyOS;
+package com.alternet.skyOS.Kernel;
 
 import java.util.Scanner;
 
@@ -71,6 +71,8 @@ class Kernel {
         echo = scanner.nextLine();
         print(echo);
       }
+      else:
+        print("Invalid command. Type 'help' for help.")
       }
     }
   }
