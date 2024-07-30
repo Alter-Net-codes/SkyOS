@@ -10,11 +10,7 @@ to because it is written in python a very easy langauge! (to learn and program i
 how to contribute below!
 
 ## contributing
-email:
-terpstragraham@gmail.com
-and wait for a notification that you can contribute.
-then click accept head over to this repository
-and help us work on skyOS!
+the website has info on this go to it!
 
 ## website
 https://webbrowser11.github.io/skyOSweb/
