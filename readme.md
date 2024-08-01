@@ -1,5 +1,4 @@
 no forking unless you want to contribute
->[NOTE: skyOS is under very active development]
 
 # skyOS readme.md file
 open-source operating system for the Scratch Computing Alliance [SCA]
@@ -22,6 +21,7 @@ work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
 
+>NOTE: skyOS is under very active development
 
 
 
