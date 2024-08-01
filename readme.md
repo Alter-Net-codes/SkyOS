@@ -20,63 +20,9 @@ also for more infromation on cotributing!
 work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
-
+ 
 >NOTE: skyOS is under very active development
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 CLASSIFIED (kinda):
 new SkyOS lua edition maybe????
 new PAL package manager coming to SkyOS (maybe???)
