@@ -1,4 +1,4 @@
-no forking unless you want to contribute
+no forking unless you want to contribu
 
 # skyOS readme.md file
 open-source operating system for the Scratch Computing Alliance [SCA]
