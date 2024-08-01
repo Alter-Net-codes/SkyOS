@@ -71,29 +71,31 @@ while True:
             print(f"{index}: {cmd}")
 
     elif command == "shutdown":
-        os_option = input("Are you sure? Type 'yes' to confirm.")
+        os_option = input("Are you sure? Type 'yes' to confirm: ")
         if os_option == "yes":
-            if system.platform() == "Darwin":
+            if platform.system() == "Darwin":
                 os.system("shutdown -h now")
-            elif system.platform() == "Linux":
+            elif platform.system() == "Linux":
                 os.system("shutdown -h now")
-            elif system.platform() == "Windows":
+            elif platform.system() == "Windows":
                 os.system("shutdown /s")
         else:
             print("Shutdown cancelled.")
             continue
+            
     elif command == "reboot":
-        os_option = input("Are you sure? Type 'yes' to confirm.")
+        os_option = input("Are you sure? Type 'yes' to confirm: ")
         if os_option == "yes":
-            if system.platform() == "Darwin":
+            if platform.system() == "Darwin":
                 os.system("shutdown -r now")
-            elif system.platform() == "Linux":
+            elif platform.system() == "Linux":
                 os.system("shutdown -r now")
-            elif system.platform() == "Windows":
+            elif platform.system() == "Windows":
                 os.system("shutdown /r")
         else:
             print("Reboot cancelled.")
             continue
+
     elif command == "shell":
         os.system(input("Enter a shell command: "))
     elif command == "applescript":
