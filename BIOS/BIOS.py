@@ -4,7 +4,7 @@ import sys
  
 kernelState = None
 
-print("SkyOS v2.5 fully bugfixed update")
+print("SkyOS v2.6 bugfix + app update")
 print("This device is running SkyOS")
 print("/kernel/bios")
 print(" ^ BIOS is running here")
