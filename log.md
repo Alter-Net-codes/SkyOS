@@ -1,50 +1,50 @@
-# the log
+# The Log
 
 ## 6/22/24
-creation
+Creation
 
-v0.1-0.9 the pre-creation and bug fixing stage (6/22/24 11:00am-5:00pm)
-v1.0 inatial realease (6/22/24 8:00pm)
+v0.1-0.9 The pre-creation and bug fixing stage (6/22/24 11:00am-5:00pm)
+v1.0 Initial release (6/22/24 8:00pm)
 
 ## 6/23/24
-v1.1 added new app! simple text app (1:00-2:00)
+v1.1 Added new app! Simple text app (1:00-2:00)
 
 ## 6/24/24
 v1.2
-quick bug fix (10:35)
-lots of bug fixes (3:00-5:00)
+Quick bug fix (10:35)
+Lots of bug fixes (3:00-5:00)
 
 ## 6/25/24
 v1.3
-not much...
+Not much...
 
 ## 6/26/24
 v1.4
-added a command with a new parameter.
+Added a command with a new parameter.
 
 ## 6/27/24
-v1.5 new app (11:30-12:00)
-v1.6 updated kernel (12:00-12:30)
+v1.5 New app (11:30-12:00)
+v1.6 Updated kernel (12:00-12:30)
 
 ## 6/28/24
 v1.7
-updated the kernel (added time command did some bug fixes, 1:00 - 2:00)
+Updated the kernel (added time command did some bug fixes, 1:00 - 2:00)
 
 ## 6/30/24
 v1.8
-added a new paramter for the command TREE created on the 26th.
+Added a new parameter for the command TREE created on the 26th.
 
 ## 7/2/24
 v1.9 
-shutdown scripts
+Shutdown scripts
 
 ## 7/3/24
 v2.0
-bug fix
+Bug fix
 
 ## 7/4/24
 v2.0
-did an update to the copyright notice.
+Did an update to the copyright notice.
 
 ## 7/16/24
 v2.1
@@ -52,24 +52,28 @@ Updated things and changed many parts and added Mac support.
 
 ## 7/17/24
 v2.2
-syntax error updates
+Syntax error updates
 
 ## 7/18/24
 v2.3
-added BIOS and the first version outr of the last 2 ready to realease.
+Added BIOS and the first version out of the last 2 ready to release.
 
 ## 7/19/24
-v2.4 bugfixes!
+v2.4 Bug fixes!
 
 ## 7/23/24
 v2.4.1
 Added Java support, InterApp Mocha for launching JARs, and a new "jars" folder for storing JARs (with an included hello-world.jar file).
-Added a kernel panic function and a few bugfixes.
+Added a kernel panic function and a few bug fixes.
 
 ## 7/24/24
 v2.4.2
-deleted java support interapp and jars and jar folder
-kept kernel panic BUGFIXESSS!!!!
+Deleted Java support InterApp and jars and jar folder
+Kept kernel panic BUGFIXESSS!!!!
 
-## stay tuned
-stay tuned for more logs and update info!
+## 7/31/24
+v2.6
+Updated BIOS script and bug fixes. (5:03-6:12)
+
+## Stay tuned
+Stay tuned for more logs and update info!
