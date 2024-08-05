@@ -76,6 +76,7 @@ v2.6
 Updated BIOS script and bug fixes. (5:03-6:12)
 
 ## 8/1/24 - 8/12/24
+v2.6
 working on the next release
 
 ## Stay tuned
