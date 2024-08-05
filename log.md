@@ -75,5 +75,8 @@ Kept kernel panic BUGFIXESSS!!!!
 v2.6
 Updated BIOS script and bug fixes. (5:03-6:12)
 
+## 8/1/24 - 8/12/24
+working on the next release
+
 ## Stay tuned
 Stay tuned for more logs and update info!
