@@ -40,13 +40,17 @@ with open("password.txt", "r") as password_file:
 used_before = input("Have you used SkyOS before? (yes/no): ").strip().lower()
 
 if used_before == "yes":
-    password = input(f"Enter your password, {stored_username}: ").strip()
-    
-    if password == stored_password:
-        print(f"Welcome, {stored_username}!")
-    else:
-        print("Incorrect password. Please run the setup again.")
-        sys.exit()
+    while True:
+        password = input(f"Enter your password, {stored_username}: ").strip()
+        
+        if password == stored_password:
+            print(f"Welcome, {stored_username}!")
+            break
+        else:
+            retry = input("Incorrect password. Would you like to try again? (yes/no): ").strip().lower()
+            if retry != "yes":
+                print("Exiting. Please run the setup if you need to reset your password.")
+                sys.exit()
 else:
     print("Please run the setup to create a username and password.")
     sys.exit()
