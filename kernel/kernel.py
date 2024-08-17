@@ -4,15 +4,57 @@ import sys
 import platform
 
 treevalue = 1
-
 panicErrorCode = None
 
 def panic(errorCode):
     print(f"skyOS has crashed. Error code: {errorCode}")
 
-print("Welcome to skyOS! Thank you to all those contributors who worked on this!")
+# Define the path to the setup.py script in the setup directory
+setup_script_path = os.path.join(os.getcwd(), 'setup', 'setup.py')
+
+# Check if the required files exist
+if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
+    print("Username or password file is missing. Running setup...")
+    
+    if os.path.isfile(setup_script_path):
+        try:
+            subprocess.run([sys.executable, setup_script_path], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Error executing the setup script: {e}")
+            sys.exit()
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            sys.exit()
+    else:
+        print("Setup script not found. Please ensure 'setup.py' is in the 'setup' directory.")
+        sys.exit()
+
+# After setup, check again for username and password
+with open("username.txt", "r") as user_file:
+    stored_username = user_file.read().strip()
+
+with open("password.txt", "r") as password_file:
+    stored_password = password_file.read().strip()
+
+# Check if the user has used SkyOS before
+used_before = input("Have you used SkyOS before? (yes/no): ").strip().lower()
+
+if used_before == "yes":
+    password = input(f"Enter your password, {stored_username}: ").strip()
+    
+    if password == stored_password:
+        print(f"Welcome, {stored_username}!")
+    else:
+        print("Incorrect password. Please run the setup again.")
+        sys.exit()
+else:
+    print("Please run the setup to create a username and password.")
+    sys.exit()
+
+# Continue with the SkyOS boot process
+print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v2.4 arcitechure written in python3")
+print("SkyOS v2.4 architecture written in Python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
