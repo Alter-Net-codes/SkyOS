@@ -12,10 +12,8 @@ def panic(errorCode):
 # Define the path to the setup.py script in the setup directory
 setup_script_path = os.path.join(os.getcwd(), 'setup', 'setup.py')
 
-# Check if the required files exist
-if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
-    print("Username or password file is missing. Running setup...")
-    
+# Function to run the setup script
+def run_setup():
     if os.path.isfile(setup_script_path):
         try:
             subprocess.run([sys.executable, setup_script_path], check=True)
@@ -28,6 +26,11 @@ if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
     else:
         print("Setup script not found. Please ensure 'setup.py' is in the 'setup' directory.")
         sys.exit()
+
+# Check if the required files exist
+if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
+    print("Username or password file is missing. Running setup...")
+    run_setup()
 
 # After setup, check again for username and password
 with open("username.txt", "r") as user_file:
@@ -49,10 +52,10 @@ if used_before == "yes":
         else:
             retry = input("Incorrect password. Would you like to try again? (yes/no): ").strip().lower()
             if retry != "yes":
-                print("Exiting. Please run the setup if you need to reset your password.")
-                sys.exit()
+                print("You can run the setup command to reset your username and password.")
+                break
 else:
-    print("Please run the setup to create a username and password.")
+    print("Please run the setup command to create a username and password.")
     sys.exit()
 
 # Continue with the SkyOS boot process
@@ -83,6 +86,7 @@ while True:
         print("shell - run a shell command")
         print("applescript - Run AppleScript code (needs a Mac)")
         print("bios - run the bios")
+        print("setup - run the setup script to reset your username and password")
     
     elif command == "info":
         print("Developed by the SCA. All rights reserved.")
@@ -163,6 +167,9 @@ while True:
             panicErrorCode = "MISSING_BIOS"
             break
             
+    elif command == "setup":
+        run_setup()
+        
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
