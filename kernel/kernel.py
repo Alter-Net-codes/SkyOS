@@ -3,11 +3,12 @@ import os
 import sys
 import platform
 
-treevalue = 1
-panicErrorCode = None
-
 def panic(errorCode):
     print(f"skyOS has crashed. Error code: {errorCode}")
+
+# Example variables; ensure they are used or remove if unnecessary
+treevalue = 1
+panicErrorCode = None
 
 # Define the path to the setup.py script in the setup directory
 setup_script_path = os.path.join(os.getcwd(), 'setup', 'setup.py')
