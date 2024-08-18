@@ -62,7 +62,7 @@ else:
 # Continue with the SkyOS boot process
 print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v2.4 architecture written in Python3")
+print("SkyOS v2.6 written in Python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
 apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
