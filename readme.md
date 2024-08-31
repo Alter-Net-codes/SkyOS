@@ -23,4 +23,10 @@ work on this project is STILL IN PROGRESS
  
 >NOTE: skyOS is under very active development
 
-new PAL package manager coming to SkyOS (maybe???)
+# install
+## linux
+install the source code and run kernel.py
+## windows
+install a python interpreter and then install the source code and run kernel.py
+## mac
+idk how to do this on a mac anyone know?
