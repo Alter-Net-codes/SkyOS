@@ -4,9 +4,9 @@ import sys
  
 kernelState = None
 
-print("SkyOS v2.6 bugfix + app update")
+print("SkyOS v2.7")
 print("This device is running SkyOS")
-print("/kernel/bios")
+print("root/bios/")
 print(" ^ BIOS is running here")
 
 def main():
@@ -15,7 +15,7 @@ def main():
         if answer == "no":
             print("SkyOS v2.7 fully bugfixed update")
             print("This device is running SkyOS")
-            print("/main/bios/")
+            print("/root/bios/")
             print(" ^ BIOS is running here")
         elif answer == "yes":
             # Path to the kernel script in the KERNEL folder
