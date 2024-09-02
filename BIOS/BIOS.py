@@ -13,7 +13,7 @@ def main():
     while True:
         answer = input("exit? (yes/no): ").strip().lower()
         if answer == "no":
-            print("SkyOS v2.5 fully bugfixed update")
+            print("SkyOS v2.7 fully bugfixed update")
             print("This device is running SkyOS")
             print("/main/bios/")
             print(" ^ BIOS is running here")
