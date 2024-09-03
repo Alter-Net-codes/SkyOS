@@ -11,6 +11,7 @@ treevalue = 1
 panicErrorCode = None
 
 # Define the path to the setup.py script in the setup directory
+os.chdir('..')
 setup_script_path = os.path.join(os.getcwd(), 'setup', 'setup.py')
 
 # Function to run the setup script
