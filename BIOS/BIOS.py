@@ -9,6 +9,8 @@ print("This device is running SkyOS")
 print("root/bios/")
 print(" ^ BIOS is running here")
 
+os.chdir('..')
+
 def main():
     while True:
         answer = input("exit? (yes/no): ").strip().lower()
