@@ -157,6 +157,11 @@ while True:
                 os.system(f"osascript -e '{applescript_cmd}'")
             else:
                 print("You need a Mac for this!")
+        else:
+            if platform.system() == "Darwin":
+                os.system(f"osascript '{applescript_cmd}'")
+            else:
+                print("You need a Mac for this!")
 
 
     elif command == "bios":
