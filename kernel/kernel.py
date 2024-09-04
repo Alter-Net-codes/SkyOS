@@ -66,8 +66,8 @@ print("Hope you find this OS useful!")
 print("SkyOS v2.6 written in Python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
-apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
-BIOS_location = os.path.join(os.path.dirname(os.getcwd()), "BIOS")
+apps_dir = os.path.join(os.getcwd(), 'apps')
+BIOS_location = os.path.join(os.getcwd(), "BIOS")
 
 command_history = []
 
@@ -151,10 +151,13 @@ while True:
     elif command == "shell":
         os.system(input("Enter a shell command: "))
     elif command == "applescript":
-        if platform.system() == "Darwin":
-            os.system("oascript" + input("Enter your AppleScript file or command: "))
-        else:
-            print("You need a Mac for this!")
+        applescript_cmd = input("Enter your AppleScript file or command: ")
+        if not ".scpt" in applescript_cmd:
+            if platform.system() == "Darwin":
+                os.system(f"osascript -e '{applescript_cmd}'")
+            else:
+                print("You need a Mac for this!")
+
 
     elif command == "bios":
         script_path = os.path.join(BIOS_location, 'BIOS.py')
