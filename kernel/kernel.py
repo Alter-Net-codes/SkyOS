@@ -3,15 +3,29 @@ import os
 import sys
 import platform
 
+version = "SkyOS-2.7"
+
 def panic(errorCode):
     print(f"skyOS has crashed. Error code: {errorCode}")
 
-# Example variables; ensure they are used or remove if unnecessary
-treevalue = 1
-panicErrorCode = None
+# Function to get the username based on the OS
+def get_username():
+    if platform.system() == "Windows":
+        return os.getlogin()  # or os.environ['USERNAME']
+    else:
+        return os.getenv('USER')
 
-# Define the path to the setup.py script in the setup directory
-setup_script_path = os.path.abspath(os.path.join(os.getcwd(), 'setup', 'setup.py'))
+username = get_username()
+
+# Set up paths for setup, BIOS, and apps based on the OS
+if platform.system() == "Windows":
+    setup_script_path = rf'C:\Users\{username}\downloads\{version}\setup\setup.py'
+    BIOS_location = rf'C:\Users\{username}\downloads\{version}\BIOS'
+    apps_dir = rf'C:\Users\{username}\downloads\{version}\apps'
+else:
+    setup_script_path = f'/home/{username}/downloads/{version}/setup/setup.py'
+    BIOS_location = f'/home/{username}/downloads/{version}/BIOS'
+    apps_dir = f'/home/{username}/downloads/{version}/apps'
 
 # Function to run the setup script
 def run_setup():
@@ -25,7 +39,7 @@ def run_setup():
             print(f"An unexpected error occurred: {e}")
             sys.exit()
     else:
-        panicErrorCode = "COULD_NOT_FIND_SETUP"
+        panic("COULD_NOT_FIND_SETUP")
         sys.exit()
 
 # Check if the required files exist
@@ -40,33 +54,22 @@ with open("username.txt", "r") as user_file:
 with open("password.txt", "r") as password_file:
     stored_password = password_file.read().strip()
 
-# Check if the user has used SkyOS before
-used_before = input("Have you used SkyOS before? (yes/no): ").strip().lower()
+authenticated = False
 
-if used_before == "yes":
-    while True:
-        password = input(f"Enter your password, {stored_username}: ").strip()
+# password
+while not authenticated:
+    password = input(f"Enter your password, {stored_username}: ").strip()
         
-        if password == stored_password:
-            print(f"Welcome, {stored_username}!")
-            break
-        else:
-            retry = input("Incorrect password. Would you like to try again? (yes/no): ").strip().lower()
-            if retry != "yes":
-                print("You can run the setup command to reset your username and password.")
-                break
-else:
-    print("Please run the setup command to create a username and password.")
-    sys.exit()
+    if password == stored_password:
+        print(f"Welcome, {stored_username}!")
+        authenticated = True
+    else:
+        print("Incorrect password. try again")
 
 # Continue with the SkyOS boot process
 print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
 print("Hope you find this OS useful!")
-print("SkyOS v2.6 written in Python3")
-
-# Assuming the apps directory is one level up from the KERNEL directory
-apps_dir = os.path.abspath(os.path.join(os.getcwd(), 'apps'))
-BIOS_location = os.path.abspath(os.path.join(os.getcwd(), "BIOS"))
+print(f"{version} written in Python3")
 
 command_history = []
 
@@ -84,14 +87,12 @@ while True:
         print("history - show all command history")
         print("shutdown - shut down the system")
         print("reboot - reboot the system")
-        print("shell - run a shell command")
-        print("applescript - Run AppleScript code (needs a Mac)")
         print("bios - run the bios")
         print("setup - run the setup script to reset your username and password")
     
     elif command == "info":
-        print("Developed by the SCA. All rights reserved.")
-        print("This kernel may be reproduced in any way under the MIT License.")
+        print("Developed by the SCA and Alter Net codes. All rights reserved.")
+        print("This kernel may be reproduced in any way under the Alter Net License.")
         print("You can archive (make sure the archive is public).")
     
     elif command == "echo":
@@ -100,7 +101,7 @@ while True:
 
     elif command == "tree":
         treevalue = input("tree:")
-        print("the value of tree is set.")
+        print("The value of tree is set.")
     elif command == "tree -p":
         print(treevalue)
         
@@ -147,31 +148,26 @@ while True:
             print("Reboot cancelled.")
             continue
 
-    elif command == "shell":
-        os.system(input("Enter a shell command: "))
-    elif command == "applescript":
-        if platform.system() == "Darwin":
-            os.system("oascript" + input("Enter your AppleScript file or command: "))
-        else:
-            print("You need a Mac for this!")
-
     elif command == "bios":
-        script_path = os.path.join(BIOS_location, 'BIOS.py')
-        if os.path.isfile(script_path):
-            try:
-                subprocess.run([sys.executable, script_path], check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Error executing the script: {e}")
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
+        if authenticated:
+            script_path = os.path.join(BIOS_location, 'BIOS.py')
+            if os.path.isfile(script_path):
+                try:
+                    subprocess.run([sys.executable, script_path], check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error executing the script: {e}")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
+            else:
+                panic("MISSING_BIOS")
+                break
         else:
-            panicErrorCode = "MISSING_BIOS"
-            break
-            
+            print("You must be authenticated to run the BIOS.")
+
     elif command == "setup":
         run_setup()
         
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
-panic(panicErrorCode)
+panic(None)
