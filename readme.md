@@ -21,7 +21,7 @@ work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
  
->NOTE: skyOS is under very active development
+>NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
 
 # install
 ## linux
