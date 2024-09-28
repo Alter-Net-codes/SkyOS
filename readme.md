@@ -29,4 +29,4 @@ install the source code and run kernel.py
 ## windows
 install a python interpreter and then install the source code and run kernel.py
 ## mac
-idk how to do this on a mac anyone know?
+no support
