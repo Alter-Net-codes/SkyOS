@@ -11,7 +11,7 @@ treevalue = 1
 panicErrorCode = None
 
 # Define the path to the setup.py script in the setup directory
-setup_script_path = os.path.join(os.getcwd(), 'setup', 'setup.py')
+setup_script_path = os.path.abspath(os.path.join(os.getcwd(), 'setup', 'setup.py'))
 
 # Function to run the setup script
 def run_setup():
@@ -65,8 +65,8 @@ print("Hope you find this OS useful!")
 print("SkyOS v2.6 written in Python3")
 
 # Assuming the apps directory is one level up from the KERNEL directory
-apps_dir = os.path.join(os.path.dirname(os.getcwd()), 'apps')
-BIOS_location = os.path.join(os.path.dirname(os.getcwd()), "BIOS")
+apps_dir = os.path.abspath(os.path.join(os.getcwd(), 'apps'))
+BIOS_location = os.path.abspath(os.path.join(os.getcwd(), "BIOS"))
 
 command_history = []
 
