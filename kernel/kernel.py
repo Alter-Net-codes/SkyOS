@@ -25,7 +25,7 @@ def run_setup():
             print(f"An unexpected error occurred: {e}")
             sys.exit()
     else:
-        print("Setup script not found. Please ensure 'setup.py' is in the 'setup' directory.")
+        panicErrorCode = "COULD_NOT_FIND_SETUP"
         sys.exit()
 
 # Check if the required files exist
