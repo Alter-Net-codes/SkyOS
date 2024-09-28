@@ -77,7 +77,10 @@ Updated BIOS script and bug fixes. (5:03-6:12)
 
 ## 8/1/24 - 8/12/24
 v2.6
-working on the next release
+
+## 9/28/24
+finished the setup bios and app issues there is an issue with the sign in mechanic. (every time i run a app it makes me sign in again.)
+fix this and do some more stuff. and we are done! (lets do this and finish team!) GO SKYOS!
 
 ## Stay tuned
 Stay tuned for more logs and update info!
