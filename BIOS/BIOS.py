@@ -4,18 +4,18 @@ import sys
  
 kernelState = None
 
-print("SkyOS v2.7")
+print("SkyOS v2.7 bugfix + app update")
 print("This device is running SkyOS")
-print("root/bios/")
+print("/bios/bios.py")
 print(" ^ BIOS is running here")
 
 def main():
     while True:
         answer = input("exit? (yes/no): ").strip().lower()
         if answer == "no":
-            print("SkyOS v2.7 fully bugfixed update")
+            print("SkyOS v2.7")
             print("This device is running SkyOS")
-            print("/root/bios/")
+            print("/bios/bios.py/")
             print(" ^ BIOS is running here")
         elif answer == "yes":
             # Path to the kernel script in the KERNEL folder
@@ -37,7 +37,7 @@ def main():
         else:
             print("Invalid input. Please type 'yes' or 'no'.")
 if kernelState == "gone":
- print("The skyOS kernel is missing. Please reinstall skyOS or replace the kernel script,")
+ print("The skyOS kernel is missing. Please reinstall skyOS or, replace the kernel script.")
 
 if __name__ == "__main__":
     main()
