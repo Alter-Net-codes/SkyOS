@@ -79,8 +79,13 @@ Updated BIOS script and bug fixes. (5:03-6:12)
 v2.6
 
 ## 9/28/24
+v2.7 
 finished the setup bios and app issues there is an issue with the sign in mechanic. (every time i run a app it makes me sign in again.)
 fix this and do some more stuff. and we are done! (lets do this and finish team!) GO SKYOS!
+
+## 10/03/24
+v2.8
+Re-added macOS support and replaced some if statements with case-match statements. Re-added AppleScript support on Macs. Yes, it technically works on macOS as it is a bunch of Python scripts.
 
 ## Stay tuned
 Stay tuned for more logs and update info!
