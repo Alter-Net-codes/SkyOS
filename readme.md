@@ -47,8 +47,4 @@ install the source code and run kernel.py:
 ## windows
 install a python interpreter and then install the source code and run kernel.py:
 `C:\Users\<username>\Downloads\SkyOS-(version)\kernel\kernel.py`
-## mac
-"install instructions coming soon" and then run kernel.py:
-`/Users/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
 #### NOTE: 
-on all operating systems after installing you can run: 
