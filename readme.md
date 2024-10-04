@@ -23,6 +23,19 @@ work on this project is STILL IN PROGRESS
  
 >NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
 
+# Install Dependencies
+python:
+```
+python 3.12.5+
+```
+modules:
+```
+subprocess
+os
+sys
+platform
+```
+
 # install
 ## linux
 install the source code and run kernel.py
