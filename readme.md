@@ -23,6 +23,9 @@ work on this project is STILL IN PROGRESS
  
 >NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
 
+
+# install
+
 # Install Dependencies
 python:
 ```
@@ -37,9 +40,15 @@ platform
 ```
 
 # install
+YOU MUST INSTALL IT IN DOWNLOADS!
 ## linux
-install the source code and run kernel.py
+install the source code and run kernel.py:
+`python /home/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
 ## windows
-install a python interpreter and then install the source code and run kernel.py
+install a python interpreter and then install the source code and run kernel.py:
+`C:\Users\<username>\Downloads\SkyOS-(version)\kernel\kernel.py`
 ## mac
-no support
+"install instructions coming soon" and then run kernel.py:
+`/Users/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
+#### NOTE: 
+on all operating systems after installing you can run: 
