@@ -47,4 +47,3 @@ install the source code and run kernel.py:
 ## windows
 install a python interpreter and then install the source code and run kernel.py:
 `C:\Users\<username>\Downloads\SkyOS-(version)\kernel\kernel.py`
-#### NOTE: 
