@@ -22,10 +22,13 @@ if platform.system() == "Windows":
     setup_script_path = rf'C:\Users\{username}\downloads\{version}\setup\setup.py'
     BIOS_location = rf'C:\Users\{username}\downloads\{version}\BIOS'
     apps_dir = rf'C:\Users\{username}\downloads\{version}\apps'
+    bios_log_location = rf'C:\Users\{username}\downloads\{version}\bios_log.txt'
 else:
-    setup_script_path = f'/home/{username}/downloads/{-version}/setup/setup.py'
+    setup_script_path = f'/home/{username}/downloads/{version}/setup/setup.py'
     BIOS_location = f'/home/{username}/downloads/{version}/BIOS'
     apps_dir = f'/home/{username}/downloads/{version}/apps'
+    bios_log_location = f'/home/{username}/downloads/{version}/bios_log.txt'
+
 
 # Function to run the setup script
 def run_setup():
@@ -80,21 +83,38 @@ while True:
     
     if command == "help":
         print("Available commands:")
-        print("help - show this help message")
-        print("info - show information about this program")
+        print("help - show the help message")
+        print("info - show information about SkyOS")
         print("echo - echo back what you type")
         print("app - run an application")
-        print("tree - create a value for tree. use the -p command to print the value.")
+        print("tree - create a value for tree. use the -p parameter to print the value.")
         print("history - show all command history")
         print("shutdown - shut down the system")
         print("reboot - reboot the system")
         print("bios - run the bios")
         print("setup - run the setup script to reset your username and password")
+        print("bios log - print out the bios log")
+
+    elif command == "bios log":
+        try:
+            with open(bios_log_location, 'r') as file:
+                # Read the content of the file
+                file_content = file.read()
+                
+                # Print the content
+                print("File Content:\n", file_content)
+
+        except FileNotFoundError:
+            print(f"File '{bios_log_location}' not found.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
     
     elif command == "info":
         print("Developed by the SCA and Alter Net codes. All rights reserved.")
         print("This kernel may be reproduced in any way under the Alter Net License.")
         print("You can archive (make sure the archive is public).")
+        print(f"curretn SkyOS version: {version}")
     
     elif command == "echo":
         echotxt = input("Echo what: ").strip()
