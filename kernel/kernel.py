@@ -3,7 +3,7 @@ import os
 import sys
 import platform
 
-version = "SkyOS-2.7"
+version = "SkyOS-2.6.7"
 
 def panic(errorCode):
     print(f"skyOS has crashed. Error code: {errorCode}")
@@ -23,12 +23,13 @@ if platform.system() == "Windows":
     BIOS_location = rf'C:\Users\{username}\downloads\{version}\BIOS'
     apps_dir = rf'C:\Users\{username}\downloads\{version}\apps'
 else:
-    setup_script_path = f'/home/{username}/downloads/{version}/setup/setup.py'
+    setup_script_path = f'/home/{username}/downloads/{-version}/setup/setup.py'
     BIOS_location = f'/home/{username}/downloads/{version}/BIOS'
     apps_dir = f'/home/{username}/downloads/{version}/apps'
 
 # Function to run the setup script
 def run_setup():
+    print(f"supposed setup path: {setup_script_path}")
     if os.path.isfile(setup_script_path):
         try:
             subprocess.run([sys.executable, setup_script_path], check=True)
