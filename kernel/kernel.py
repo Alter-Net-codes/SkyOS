@@ -23,7 +23,7 @@ if platform.system() == "Windows":
     BIOS_location = rf'C:\Users\{username}\downloads\{version}\BIOS'
     apps_dir = rf'C:\Users\{username}\downloads\{version}\apps'
     bios_log_location = rf'C:\Users\{username}\downloads\{version}\bios_log.txt'
-else:
+elif platform.system() == "Linux":
     setup_script_path = f'/home/{username}/downloads/{version}/setup/setup.py'
     BIOS_location = f'/home/{username}/downloads/{version}/BIOS'
     apps_dir = f'/home/{username}/downloads/{version}/apps'
