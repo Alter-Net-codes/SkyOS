@@ -1,4 +1,5 @@
->[!no forking unless you want to contribute (or archive archiving is fine)]
+>[! NOTE]
+>no forking unless you want to contribute (or archive archiving is fine)
 
 # SkyOS readme.md file
 open-source operating system for the Scratch Computing Alliance [SCA]
@@ -21,6 +22,7 @@ work on this project is STILL IN PROGRESS
 
 <ins>written from SCRATCH!<ins>
  
+>[! NOTE]
 >NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
 
 
