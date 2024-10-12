@@ -1,4 +1,5 @@
-> ℹ️ **INFO:** No forking unless you want to contribute (or archive, archiving is fine)
+> [!NOTE]
+> No forking unless you want to contribute (or archive, archiving is fine)
 
 # SkyOS readme.md file
 open-source operating system for the Scratch Computing Alliance [SCA]
