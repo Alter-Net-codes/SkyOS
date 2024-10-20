@@ -28,7 +28,7 @@ work on this project is STILL IN PROGRESS
 
 # install
 
-# Install Dependencies
+## Install Dependencies
 python:
 ```
 python 3.12.5+
@@ -39,13 +39,16 @@ subprocess
 os
 sys
 platform
+logging
+shutil
+datetime
 ```
 
-# install
+## install
 YOU MUST INSTALL IT IN DOWNLOADS!
-## linux
+### linux
 install the source code and run kernel.py:
 `python /home/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
-## windows
+### windows
 install a python interpreter and then install the source code and run kernel.py:
 `C:\Users\<username>\Downloads\SkyOS-(version)\kernel\kernel.py`
