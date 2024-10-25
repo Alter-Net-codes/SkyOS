@@ -187,6 +187,10 @@ while True:
 
     elif command == "setup":
         run_setup()
+
+    elif command == "135795":
+        print("You found the easter egg")
+        print("where did you find it tho?")
         
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
