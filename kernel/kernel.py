@@ -72,7 +72,6 @@ while not authenticated:
 
 # Continue with the SkyOS boot process
 print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
-print("Hope you find this OS useful!")
 print(f"{version} written in Python3")
 
 command_history = []
@@ -80,11 +79,13 @@ command_history = []
 while True:
     command = input("command: ").strip().lower()
     command_history.append(command)
+    print("for more info type help, info or copyright")
     
     if command == "help":
         print("Available commands:")
         print("help - show the help message")
         print("info - show information about SkyOS")
+        print("copyright - copyright info")
         print("echo - echo back what you type")
         print("app - run an application")
         print("tree - create a value for tree. use the -p parameter to print the value.")
@@ -112,9 +113,14 @@ while True:
     
     elif command == "info":
         print("Developed by the SCA and Alter Net codes. All rights reserved.")
-        print("This kernel may be reproduced in any way under the Alter Net License.")
+        print("This kernel MAY be reproduced in any way under the Alter Net License.")
         print("You can archive (make sure the archive is public).")
-        print(f"curretn SkyOS version: {version}")
+        print(f"Current SkyOS version: {version}")
+
+    elif command == "copyright":
+        print("Copyright 2024 Alter Net codes, SCA all rights reserved")
+        print("if adding on to or wanting to hold a copy of this software")
+        print("then more info is in the license file in the root directory.")
     
     elif command == "echo":
         echotxt = input("Echo what: ").strip()
@@ -190,7 +196,7 @@ while True:
 
     elif command == "135795":
         print("You found the easter egg")
-        print("where did you find it tho?")
+        print(" But... where did you find the password?")
         
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
