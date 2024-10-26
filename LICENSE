@@ -1,13 +1,12 @@
 ---------------------------------------------------------------------------------------------------------------------------------
-the Alter-Net LICENCE
+the Alter-Net LICENSE
 ---------------------------------------------------------------------------------------------------------------------------------
-ANC (Alter Net codes) has put the following rules on every file except the ones listed here: log.md and readme.md
-you may not re-use this code in any form, and may only use this software
-for good use.
-you can use this product for making consuming and producing for the community.
-free addons are allowed. copying or building on to this code is not allowed if this is product is found anywhere else then 
-a local hard drive, or on github.
-we allow:
+ANC (Alter Net codes) Has put the following rules on every file except the ones listed here: log.md and readme.md
+You may re-use this code in any form as long as:
+You ONLY use this software for making, consuming, and producing for the community.
+Free addons to the software is/are allowed. Copying or building on to this software is not allowed if: The copy of the software
+is licenced under any other license OTHER then the Alter Net license.
+Usage Allows:
 commercial use
 modification (with written permission)
 collabaration
@@ -15,7 +14,8 @@ private use
 ---------------------------------------------------------------------------------------------------------------------------------
 ©2024 Alter Net codes foundation
 ©ANC public license
-thank you to evryone who contributed to this project thank you,
+
+THANKS A LOT,
 graham.
 
 If a skyOS remake new edition etc. uses a different license than this one (i.e. skyOS LUANR (the c and lua edition)), that edition remake etc.'s license will govern that ones's specific files.
