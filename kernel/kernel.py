@@ -79,7 +79,7 @@ command_history = []
 while True:
     command = input("command: ").strip().lower()
     command_history.append(command)
-    print("for more info type help, info or copyright")
+    print("for more info on the project type info, help or copyright")
     
     if command == "help":
         print("Available commands:")
