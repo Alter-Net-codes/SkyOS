@@ -82,5 +82,8 @@ v2.6
 finished the setup bios and app issues there is an issue with the sign in mechanic. (every time i run a app it makes me sign in again.)
 fix this and do some more stuff. and we are done! (lets do this and finish team!) GO SKYOS!
 
+## 9/30/24-??/??/??
+working on SkyOS 2.7 (the first really good and non-buggy update!)
+
 ## Stay tuned
 Stay tuned for more logs and update info!
