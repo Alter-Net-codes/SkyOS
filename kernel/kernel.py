@@ -4,9 +4,10 @@ import sys
 import platform
 
 version = "SkyOS"
+treevalue = None
 
 
-def panic(errorCode):
+def panic(errorCode):   
     print(f"skyOS has crashed. Error code: {errorCode}")
 
 
@@ -34,10 +35,10 @@ elif platform.system() == "Linux":
     bios_log_location = f'/home/{username}/downloads/{version}/bios_log.txt'
 
 elif platform.system() == "Darwin":
-    setup_script_path = f'/Users/{username}/Documents/{version}/setup/setup.py'
-    BIOS_location = f'/Users/{username}/Documents/{version}/BIOS'
-    apps_dir = f'/Users/{username}/Documents/{version}/apps'
-    bios_log_location = f'/Users/{username}/Documents/{version}/bios_log.txt'
+    setup_script_path = f'/Users/{username}/Downloads/{version}/setup/setup.py'
+    BIOS_location = f'/Users/{username}/Downloads/{version}/BIOS'
+    apps_dir = f'/Users/{username}/Downloads/{version}/apps'
+    bios_log_location = f'/Users/{username}/Downloads/{version}/bios_log.txt'
 
 else:
     raise Exception("Unsupported operating system. Please use Windows, Linux, or macOS.")
@@ -140,7 +141,7 @@ while True:
         print(echotxt)
 
     elif command == "tree":
-        treevalue = input("tree:")
+        treevalue = input("tree: ")
         print("The value of tree is set.")
     elif command == "tree -p":
         print(treevalue)
