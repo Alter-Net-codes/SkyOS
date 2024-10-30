@@ -3,10 +3,13 @@ import os
 import sys
 import platform
 
-version = "SkyOS-2.6.7"
+version = "SkyOS"
+treevalue = None
 
-def panic(errorCode):
+
+def panic(errorCode):   
     print(f"skyOS has crashed. Error code: {errorCode}")
+
 
 # Function to get the username based on the OS
 def get_username():
@@ -14,6 +17,7 @@ def get_username():
         return os.getlogin()  # or os.environ['USERNAME']
     else:
         return os.getenv('USER')
+
 
 username = get_username()
 
@@ -23,11 +27,21 @@ if platform.system() == "Windows":
     BIOS_location = rf'C:\Users\{username}\downloads\{version}\BIOS'
     apps_dir = rf'C:\Users\{username}\downloads\{version}\apps'
     bios_log_location = rf'C:\Users\{username}\downloads\{version}\bios_log.txt'
+
 elif platform.system() == "Linux":
     setup_script_path = f'/home/{username}/downloads/{version}/setup/setup.py'
     BIOS_location = f'/home/{username}/downloads/{version}/BIOS'
     apps_dir = f'/home/{username}/downloads/{version}/apps'
     bios_log_location = f'/home/{username}/downloads/{version}/bios_log.txt'
+
+elif platform.system() == "Darwin":
+    setup_script_path = f'/Users/{username}/Downloads/{version}/setup/setup.py'
+    BIOS_location = f'/Users/{username}/Downloads/{version}/BIOS'
+    apps_dir = f'/Users/{username}/Downloads/{version}/apps'
+    bios_log_location = f'/Users/{username}/Downloads/{version}/bios_log.txt'
+
+else:
+    raise Exception("Unsupported operating system. Please use Windows, Linux, or macOS.")
 
 
 # Function to run the setup script
@@ -46,6 +60,7 @@ def run_setup():
         panic("COULD_NOT_FIND_SETUP")
         sys.exit()
 
+
 # Check if the required files exist
 if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
     print("Username or password file is missing. Running setup...")
@@ -63,7 +78,7 @@ authenticated = False
 # password
 while not authenticated:
     password = input(f"Enter your password, {stored_username}: ").strip()
-        
+
     if password == stored_password:
         print(f"Welcome, {stored_username}!")
         authenticated = True
@@ -80,7 +95,7 @@ while True:
     command = input("command: ").strip().lower()
     command_history.append(command)
     print("for more info on the project type info, help or copyright")
-    
+
     if command == "help":
         print("Available commands:")
         print("help - show the help message")
@@ -101,7 +116,7 @@ while True:
             with open(bios_log_location, 'r') as file:
                 # Read the content of the file
                 file_content = file.read()
-                
+
                 # Print the content
                 print("File Content:\n", file_content)
 
@@ -110,7 +125,6 @@ while True:
         except Exception as e:
             print(f"An error occurred: {e}")
 
-    
     elif command == "info":
         print("Developed by the SCA and Alter Net codes. All rights reserved.")
         print("This kernel MAY be reproduced in any way under the Alter Net License.")
@@ -121,17 +135,17 @@ while True:
         print("Copyright 2024 Alter Net codes, SCA all rights reserved")
         print("if adding on to or wanting to hold a copy of this software")
         print("then more info is in the license file in the root directory.")
-    
+
     elif command == "echo":
         echotxt = input("Echo what: ").strip()
         print(echotxt)
 
     elif command == "tree":
-        treevalue = input("tree:")
+        treevalue = input("tree: ")
         print("The value of tree is set.")
     elif command == "tree -p":
         print(treevalue)
-        
+
     elif command == "app":
         script_path = os.path.join(apps_dir, input("Enter the app name (with a .py):"))
         if os.path.isfile(script_path):
@@ -143,7 +157,7 @@ while True:
                 print(f"An unexpected error occurred: {e}")
         else:
             print("App not found in the 'apps' directory.")
-            
+
     elif command == "history":
         print("Command History:")
         for index, cmd in enumerate(command_history, start=1):
@@ -161,7 +175,7 @@ while True:
         else:
             print("Shutdown cancelled.")
             continue
-            
+
     elif command == "reboot":
         os_option = input("Are you sure? Type 'yes' to confirm: ")
         if os_option == "yes":
@@ -197,7 +211,7 @@ while True:
     elif command == "135795":
         print("You found the easter egg")
         print(" But... where did you find the password?")
-        
+
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
