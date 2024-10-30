@@ -2,6 +2,7 @@ import subprocess
 import os
 import sys
 import platform
+import time
 
 version = "SkyOS"
 treevalue = None
@@ -9,6 +10,9 @@ treevalue = None
 
 def panic(errorCode):   
     print(f"skyOS has crashed. Error code: {errorCode}")
+    time.sleep(10)
+    sys.exit()
+
 
 
 # Function to get the username based on the OS
@@ -88,13 +92,13 @@ while not authenticated:
 # Continue with the SkyOS boot process
 print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
 print(f"{version} written in Python3")
+print("for more info on the project type info, help or copyright")
 
 command_history = []
 
 while True:
     command = input("command: ").strip().lower()
     command_history.append(command)
-    print("for more info on the project type info, help or copyright")
 
     if command == "help":
         print("Available commands:")
@@ -211,6 +215,9 @@ while True:
     elif command == "135795":
         print("You found the easter egg")
         print(" But... where did you find the password?")
+    
+    elif command == "panic":
+        panic("test_panic")
 
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
