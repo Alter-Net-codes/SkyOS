@@ -2,38 +2,38 @@
 > No forking unless you want to contribute (or archive, archiving is fine)
 
 # SkyOS readme.md file
-open-source operating system for the Scratch Computing Alliance [SCA]
+SkyOS is an open-source operating system built for the Scratch Computing Alliance (SCA)
 
-## description
-an os built FROM SCRATCH!! its open-source easy to contribute
-to because it is written in python a very easy langauge! (to learn and program in)
+## Description
+An os built FROM SCRATCH!! It's open-source and easy to contribute
+too because it is written in python a very easy language! (to learn and program in)
 *thanks god github exists so the team can work on this.*
-how to contribute below!
+How to contribute below!
 
-## contributing
-the website has info on this go to it!
+## Contributing
+The website has info on this go to it!
 
-## website
+## Website
 https://webbrowser11.github.io/skyOSweb/
-also for more infromation on cotributing!
+Also for more infromation on cotributing!
 
-## work in progress!
-work on this project is STILL IN PROGRESS
+## Work in progress!
+Work on this project is STILL IN PROGRESS
 
-<ins>written from SCRATCH!<ins>
+<ins>Written from SCRATCH!<ins>
  
->[! NOTE]
+>[!NOTE]
 >NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
 
 
-# install
+# Install
 
 ## Install Dependencies
-python:
+Python:
 ```
 python 3.12.5+
 ```
-modules:
+Modules:
 ```
 subprocess
 os
@@ -44,11 +44,15 @@ shutil
 datetime
 ```
 
-## install
-YOU MUST INSTALL IT IN DOWNLOADS!
-### linux
-install the source code and run kernel.py:
+## Install
+>[!NOTE]
+>YOU MUST INSTALL IT IN DOWNLOADS!
+### Linux
+Install the source code and run kernel.py:
 `python /home/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
-### windows
-install a python interpreter and then install the source code and run kernel.py:
+### Windows
+Install a python interpreter and then install the source code and run kernel.py:
 `C:\Users\<username>\Downloads\SkyOS-(version)\kernel\kernel.py`
+### macOS
+Install the source code (May need to install python3 since macOS only comes pre-installed with python2) and run kernel.py:
+ `python3 /Users/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
