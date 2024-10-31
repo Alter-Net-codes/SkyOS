@@ -35,16 +35,6 @@ Python:
 ```
 python 3.12.5+
 ```
-Modules:
-```
-subprocess
-os
-sys
-platform
-logging
-shutil
-datetime
-```
 
 ## Install
 >[!NOTE]
