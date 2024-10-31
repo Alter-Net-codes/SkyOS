@@ -3,6 +3,7 @@ import os
 import sys
 import platform
 import time
+from datetime import datetime
 
 version = "SkyOS"
 treevalue = None
@@ -93,6 +94,13 @@ while not authenticated:
 print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
 print(f"{version} written in Python3")
 print("for more info on the project type info, help or copyright")
+today = datetime.today()
+if today.month == 10 and today.day == 31:
+    print("HAPPY HALLOWEEN 🎃")
+if today.month == 12 and today.day == 25:
+    print("MERRY CHRTISTMAS 🎅")
+if today.month == 4 and today.day == 1:
+    print("APRIL FOOLS 😏")
 
 command_history = []
 
