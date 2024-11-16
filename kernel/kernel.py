@@ -122,7 +122,12 @@ while True:
         print("bios - run the bios")
         print("setup - run the setup script to reset your username and password")
         print("bios log - print out the bios log")
+        print("hold - hold the os in a safe envoirment")
 
+    elif command == "hold":
+        sys.clear()
+        input(" holding... press enter to cancel ")
+        
     elif command == "bios log":
         try:
             with open(bios_log_location, 'r') as file:
