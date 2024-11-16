@@ -13,7 +13,7 @@ How to contribute below!
 code stealing is NOT allowed and is very much said in our license
 
 ## Contributing
-go to the website: https://webbrowser11.github.io/skyOSweb/=
+go to the website: https://webbrowser11.github.io/skyOSweb/
 
 ## Website
 https://webbrowser11.github.io/skyOSweb/
