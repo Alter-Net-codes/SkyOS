@@ -9,14 +9,23 @@ kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
 username_file = "username.txt"
 password_file = "password.txt"
 
-# If files exist, delete them to allow setting up a new username and password
+# If files exist, prompt user if they want to delete them to allow setting up a new username and password.
+todel = input("are you running this to reset your password and/or username [yes/no]: ").lower()
 if os.path.isfile(username_file):
-    os.remove(username_file)
-    print(f"{username_file} has been deleted.")
+    if todel == "yes"
+        os.remove(username_file)
+        print(f"{username_file} has been deleted.")
+    else:
+        print("okay now leaving...")
+        sys.exit()
 
 if os.path.isfile(password_file):
-    os.remove(password_file)
-    print(f"{password_file} has been deleted.")
+    if todel == "yes"
+        os.remove(password_file)
+        print(f"{password_file} has been deleted.")
+    else:
+        print("okay now leaving...")
+        sys.exit()
 
 # Prompt the user for their username
 username = input("Enter your username: ")
