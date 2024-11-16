@@ -1,5 +1,5 @@
 # Requirements:
 ## Python
 python 3.12+
-## Computer Running
-Windows 10 and newer, Linux, and/or macOS High Sierra and newer
+## operating system
+Windows 10 and newer, or Linux, or MacOS High Sierra and newer
