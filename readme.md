@@ -5,13 +5,15 @@
 SkyOS is an open-source operating system built for the Scratch Computing Alliance (SCA)
 
 ## Description
-An os built FROM SCRATCH!! It's open-source and easy to contribute
-too because it is written in python a very easy language! (to learn and program in)
-*thanks god github exists so the team can work on this.*
+An os built FROM SCRATCH! It's open-source and easy to contribute
+to because it is written in python, a very easy language! (to learn and program in)
 How to contribute below!
 
+### reminder:
+code stealing is NOT allowed and is very much said in our license
+
 ## Contributing
-The website has info on this go to it!
+go to the website: https://webbrowser11.github.io/skyOSweb/=
 
 ## Website
 https://webbrowser11.github.io/skyOSweb/
@@ -19,11 +21,9 @@ Also for more infromation on cotributing!
 
 ## Work in progress!
 Work on this project is STILL IN PROGRESS
-
-<ins>Written from SCRATCH!<ins>
  
 >[!NOTE]
->NOTE: SkyOS is finishing devlopment soon. (probably late 2024 or early 2025)
+>NOTE: SkyOS is finishing its first devlopment stages soon. (probably late 2024 or early 2025)
 
 
 # Install
@@ -36,7 +36,7 @@ python 3.12.5+
 
 ## Install
 >[!NOTE]
->YOU MUST INSTALL IT IN DOWNLOADS!
+>YOU MUST INSTALL IT IN DOWNLOADS! (for NOW)
 ### Linux
 Install the source code and run kernel.py:
 `python /home/<username>/Downloads/SkyOS-(version)/kernel/kernel.py`
