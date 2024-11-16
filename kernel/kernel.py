@@ -230,4 +230,4 @@ while True:
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
-panic(None)
+panic(userexit)
