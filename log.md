@@ -85,5 +85,8 @@ fix this and do some more stuff. and we are done! (lets do this and finish team!
 ## 9/30/24-??/??/??
 working on SkyOS 2.7 (the first really good and non-buggy update!)
 
+## 11/15/24
+updated code protection,  setup, and panic techniques
+
 ## Stay tuned
 Stay tuned for more logs and update info!
