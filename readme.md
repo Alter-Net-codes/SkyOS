@@ -9,11 +9,8 @@ An os built FROM SCRATCH! It's open-source and easy to contribute
 to because it is written in python, a very easy language! (to learn and program in)
 How to contribute below!
 
-### reminder:
-code stealing is NOT allowed and is very much said in our license
-
 ## Contributing
-go to the website: https://webbrowser11.github.io/skyOSweb/
+see website
 
 ## Website
 https://webbrowser11.github.io/skyOSweb/
@@ -21,6 +18,9 @@ Also for more infromation on cotributing!
 
 ## Work in progress!
 Work on this project is STILL IN PROGRESS
+
+### reminder:
+code stealing is NOT allowed and is very much said in our license (someone has recently stolen it! (and the source was from a version way before the current one) )
  
 >[!NOTE]
 >NOTE: SkyOS is finishing its first devlopment stages soon. (probably late 2024 or early 2025)
