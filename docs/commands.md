@@ -1,6 +1,6 @@
 # commands
 ## Intro
-###### list of commands and thier uses for people who are interested before downloading the OS</text>
+list of commands and thier uses for people who are interested before downloading the OS</text>
 ## commands
 ###### help - show the help message
 ###### info - show information about SkyOS
