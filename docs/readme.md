@@ -2,7 +2,7 @@
 > No forking unless you want to contribute (or archive, archiving is fine)
 
 
-# merry christmas! 🎅
+# Merry Christmas! 🎅
 
 
 # SkyOS readme.md file
