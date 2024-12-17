@@ -5,6 +5,7 @@ import platform
 import time
 from datetime import datetime
 
+current_hour = datetime.now().hour
 version = "SkyOS"
 treevalue = None
 
@@ -65,7 +66,6 @@ def run_setup():
         panic("COULD_NOT_FIND_SETUP")
         sys.exit()
 
-
 # Check if the required files exist
 if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
     print("Username or password file is missing. Running setup...")
@@ -90,8 +90,13 @@ while not authenticated:
     else:
         print("Incorrect password. try again")
 
+if current_hour < 12:
+    print(f"Good morning, {sotred_username} welcome back.")
+else:
+    print(f"Good afternoon, {stored_username} welcome back.")
+
 # Continue with the SkyOS boot process
-print("Welcome to SkyOS! Thank you to all those contributors who worked on this!")
+print("Welcome back to SkyOS! Thank you to all those contributors who worked on this!")
 print(f"{version} written in Python3")
 print("for more info on the project type info, help or copyright")
 today = datetime.today()
