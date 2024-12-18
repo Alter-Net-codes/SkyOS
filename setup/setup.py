@@ -2,15 +2,24 @@ import os
 import subprocess
 import sys
 
+# vars
+dev = True # set this val to False before making a realease
+
 # Path to the kernel script in the KERNEL folder
 kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
 
 # File paths for storing username and password
 username_file = "username.txt"
 password_file = "password.txt"
+if dev == True:
+    print("Be cautious while using the following command. it will mess up the kernel configs, and you will have to change them manually.")
+    dev_askfileset = input("Do you want to set the files to write to / read from? [yes/no]: ")
+    if dev_askfileset == "yes":
+        username_file = input("what should the username file path be (use '.txt' at the end of your answer.) ")
+        password_file = input("what should the password file path be (use '.txt' at the end of your answer.) ")
 
 # If files exist, prompt user if they want to delete them to allow setting up a new username and password.
-todel = input("are you running this to reset your password and/or username [yes/no]: ").lower()
+todel = input("Are you running this to reset your password and/or username [yes/no]: ").lower()
 if os.path.isfile(username_file):
     if todel == "yes"
         os.remove(username_file)
