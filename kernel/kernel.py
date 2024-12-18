@@ -11,10 +11,9 @@ treevalue = None
 
 
 def panic(errorCode):   
-    print(f"skyOS has crashed. Error code: {errorCode}")
+    print(f"SkyOS has crashed. Error code: {errorCode}")
     time.sleep(10)
     sys.exit()
-
 
 
 # Function to get the username based on the OS
@@ -73,10 +72,10 @@ if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
 
 # After setup, check again for username and password
 with open("username.txt", "r") as user_file:
-    stored_username = user_file.read().strip()
+    stored_username = user_file.read().strip() # if you used the devtool in the setup script make this stored_password
 
 with open("password.txt", "r") as password_file:
-    stored_password = password_file.read().strip()
+    stored_password = password_file.read().strip() # if you used the devtool in the setup script make this stored_username
 
 authenticated = False
 
