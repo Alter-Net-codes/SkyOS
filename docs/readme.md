@@ -18,7 +18,7 @@ see website
 
 ## Website
 https://webbrowser11.github.io/skyOSweb/
-Also for more infromation on cotributing!
+Also for more infromation on contributing!
 
 ## Work in progress!
 Work on this project is STILL IN PROGRESS
