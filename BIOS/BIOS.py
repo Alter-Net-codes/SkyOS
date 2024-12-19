@@ -36,7 +36,6 @@ def main():
             log_and_print(" ^ BIOS is running here")
         elif answer == "yes":
             kernel_script = os.path.join(os.getcwd(), 'kernel', 'kernel.py')
-            print(kernel_script)
 
             if os.path.isfile(kernel_script):
                 try:
@@ -53,7 +52,7 @@ def main():
             log_and_print("Invalid input. Please type 'yes' or 'no'.")
 
     if kernelState == "gone":
-        log_and_print("The SkyOS kernel is missing. Please reinstall SkyOS or replace the kernel script.")
+        log_and_print("The SkyOS kernel is missing or has a defect. Please reinstall SkyOS or replace the kernel script.")
 
 
 if __name__ == "__main__":
