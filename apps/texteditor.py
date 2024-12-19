@@ -16,7 +16,7 @@ def exit_app():
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
     else:
-        print("yay! sucsess!")
+        print("Kernel Script Not found or has a defect. Please reinstall SkyOS or replace the kernel file.")
 
 def create_file(filename):
     with open(filename, 'w') as file:
