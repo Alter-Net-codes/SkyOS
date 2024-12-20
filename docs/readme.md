@@ -6,7 +6,7 @@
 
 
 # SkyOS readme.md file
-SkyOS is an open-source operating system built for the Scratch Computing Alliance (SCA)
+SkyOS is a mildly open-source operating system built for the Scratch Computing Alliance (SCA)
 
 ## Description
 An os built FROM SCRATCH! It's open-source and easy to contribute
