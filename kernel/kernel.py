@@ -148,14 +148,13 @@ while True:
 
     elif command == "info":
         print("Developed by the SCA and Alter Net codes. All rights reserved.")
-        print("This kernel MAY be reproduced in any way under the Alter Net License.")
-        print("You can archive (make sure the archive is public).")
+        print("This kernel may be reproduced if it meets the licenses terms. more info in the copyright command.")
         print(f"Current SkyOS version: {version}")
 
     elif command == "copyright":
-        print("Copyright 2024 Alter Net codes, SCA all rights reserved")
-        print("if adding on to or wanting to hold a copy of this software")
-        print("then more info is in the license file in the root directory.")
+        print("Copyright © 2024 Alter Net codes and the SCA all rights reserved")
+        print("if you are adding on to this software, or want to hold a copy of this software,")
+        print("then you can get info on copyright in the 'license' file in the root directory.")
 
     elif command == "echo":
         echotxt = input("Echo what: ").strip()
