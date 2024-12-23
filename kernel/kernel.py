@@ -71,11 +71,11 @@ if not os.path.isfile("username.txt") or not os.path.isfile("password.txt"):
     run_setup()
 
 # After setup, check again for username and password
-with open("username.txt", "r") as user_file:
-    stored_username = user_file.read().strip() # if you used the devtool in the setup script make this stored_password
+with open("username.txt", "r") as user_file: # if you used the CFP control devtool in the setup script then change this .txt files name accordingly.
+    stored_username = user_file.read().strip()
 
 with open("password.txt", "r") as password_file:
-    stored_password = password_file.read().strip() # if you used the devtool in the setup script make this stored_username
+    stored_password = password_file.read().strip() # if you used the CFP control devtool in the setup script then change this .txt files name accordingly.
 
 authenticated = False
 
