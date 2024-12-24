@@ -9,7 +9,6 @@ current_hour = datetime.now().hour
 version = "SkyOS"
 treevalue = None
 
-
 def panic(errorCode):   
     print(f"SkyOS has crashed. Error code: {errorCode}")
     time.sleep(10)
@@ -230,7 +229,7 @@ while True:
 
     elif command == "135795":
         print("You found the easter egg")
-        print(" But... where did you find the password?")
+        print("But... where did you find the password?")
     
     elif command == "panic":
         panic("test_panic")
@@ -238,4 +237,4 @@ while True:
     else:
         print(command + " is not a valid command. Type 'help' for a list of commands.")
 
-panic(userexit)
+panic()
