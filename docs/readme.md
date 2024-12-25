@@ -1,6 +1,3 @@
-# Merry Christmas! 🎅
-
-
 # SkyOS readme.md file
 SkyOS is a mildly open-source operating system built for the Scratch Computing Alliance (SCA)
 
