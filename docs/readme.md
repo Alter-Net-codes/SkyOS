@@ -6,7 +6,7 @@ An os built FROM SCRATCH! It's open-source and easy to contribute to
 because it is written in python, a very easy language to learn and program in.
 
 ## Website
-https://webbrowser11.github.io/skyOSweb/
+https://Alter-Net-codes.github.io/skyOSweb/
 This is the website and it also holds more info for contributing
  
 >[!NOTE]
