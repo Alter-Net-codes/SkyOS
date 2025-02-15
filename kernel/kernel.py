@@ -125,11 +125,11 @@ while True:
         print("bios - run the bios")
         print("setup - run the setup script to reset your username and password")
         print("bios log - print out the bios log")
-        print("hold - hold the os in a safe envoirment")
+        print("afk - hold the os in a safe envoirment while you are 'afk'")
 
-    elif command == "hold":
+    elif command == "afk":
         sys.clear()
-        input(" holding... press enter to cancel ")
+        input("in afk mode... press enter to cancel ")
         
     elif command == "bios log":
         try:
