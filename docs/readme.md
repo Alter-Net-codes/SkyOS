@@ -7,6 +7,7 @@ because it is written in python, a very easy language to learn and program in.
 
 ## Website
 https://Alter-Net-codes.github.io/skyOSweb/
+more documentation: https://alter-net-codes.gitbook.io/alter-net-codes/skyos/getting-started
 This is the website and it also holds more info for contributing
  
 >[!NOTE]
