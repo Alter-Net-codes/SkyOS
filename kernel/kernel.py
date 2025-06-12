@@ -5,6 +5,9 @@ import platform
 import time
 from datetime import datetime
 
+# NOTE TO ME IN LIKE A COUPLE WEEKS:
+# YOU JUST NEED TO FUCKING WRITE IF THE USER IS SIGNED IN TO A TEXT FILE AND THEN WHEN THEY LOG OUT OR BEFORE THE PROGRAM QUITS SET IT TO ZERO! (THEN SKIP THE SIGN IN SCREEN AND BOOT IF AND APP RUNS!)
+
 current_hour = datetime.now().hour
 version = "SkyOS"
 treevalue = None
