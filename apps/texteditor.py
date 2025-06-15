@@ -3,13 +3,12 @@ import subprocess
 import sys
 
 def exit_app():
-    # Path to the kernel script in the KERNEL folder
-    kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
-    
-    # Check if the kernel script exists before trying to run it
+    this_dir = os.path.dirname(os.path.abspath(__file__))
+    kernel_script = os.path.join(this_dir, '..', 'kernel', 'kernel.py')
+    kernel_script = os.path.normpath(kernel_script)
+
     if os.path.isfile(kernel_script):
         try:
-            # Run the kernel script as a subprocess
             subprocess.run([sys.executable, kernel_script], check=True)
         except subprocess.CalledProcessError as e:
             print(f"Error executing the kernel script: {e}")
@@ -50,7 +49,7 @@ def edit_file(filename):
         print(f"File '{filename}' does not exist.")
 
 def main():
-    print("Welcome to TextApp!")
+    print("Welcome to texteditor!")
     while True:
         command = input("Enter command (create, read, edit, exit): ").strip().lower()
         if command == "create":
@@ -63,7 +62,7 @@ def main():
             filename = input("Enter filename to edit: ").strip()
             edit_file(filename)
         elif command == "exit":
-            print("Exiting TextApp. Goodbye!")
+            print("Exiting texteditor. Goodbye!")
             exit_app()
             break  # Add this line to actually exit the loop
         else:
