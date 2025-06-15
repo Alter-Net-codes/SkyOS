@@ -87,13 +87,12 @@ def main():
             print("See you later.")
             print("Saving and quitting...")
 
-            # Path to the kernel script in the KERNEL folder
-            kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
-            
-            # Check if the kernel script exists before trying to run it
+            # Use absolute path based on this file's dir for kernel script
+            this_dir = os.path.dirname(os.path.abspath(__file__))
+            kernel_script = os.path.join(this_dir, '..', 'KERNEL', 'kernel.py')
+
             if os.path.isfile(kernel_script):
                 try:
-                    # Run the kernel script as a subprocess
                     subprocess.run([sys.executable, kernel_script], check=True)
                 except subprocess.CalledProcessError as e:
                     print(f"Error executing the kernel script: {e}")
