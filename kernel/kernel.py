@@ -171,6 +171,7 @@ while True:
         print("uname - show system information")
         print("uname -a - show all system information")
         print("uname -h - show all parameters for uname plus more help")
+        print("license - show the license information for SkyOS")
 
     elif command == "time":
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
