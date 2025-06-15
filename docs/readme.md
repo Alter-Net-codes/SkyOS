@@ -22,11 +22,11 @@ python 3.12.5+
 >[!NOTE]
 >YOU CAN INSALL IT ANYWHERE!
 ### Linux
-Install the source code and run kernel.py:
+ Get the newest python copy, download the source code and run kernel.py:
 `python /home/<username>/path/to/SkyOS/kernel/kernel.py`
 ### Windows
-Install a python interpreter and then install the source code and run kernel.py:
+Install the newest python copy and then download the source code and run kernel.py:
 `C:\Users\<username>\path\to\SkyOS\kernel\kernel.py`
 ### macOS
-Install the source code (You need to install python3 since macOS only comes pre-installed with python2) and run kernel.py:
+Download the source code (You need to install newest python copy since macOS only comes pre-installed with python2) and run kernel.py:
  `python3 /Users/<username>/path/to/SkyOS/kernel/kernel.py`
