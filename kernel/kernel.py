@@ -5,6 +5,8 @@ import platform
 import time
 from datetime import datetime
 
+# FINAL UPDATE: get exit to work.
+
 valid_version = "2.7"
 
 colors = {
