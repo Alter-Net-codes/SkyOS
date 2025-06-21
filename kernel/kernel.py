@@ -99,7 +99,7 @@ def welcome():
         print(f"Good afternoon, {stored_username} welcome back.")
 
     print("Welcome back to SkyOS! Thank you to all those contributors who worked on this!")
-    print(f"{version} written in Python3")
+    print(f"{valid_version} written in Python3")
     print("ALWAYS USE EXIT COMMAND TO EXIT THE OS, DO NOT CLOSE THE WINDOW!")
     print("For more info on the project type: info, help (commands) or copyright.")
     today = datetime.today()
@@ -203,7 +203,7 @@ while True:
     elif command == "info":
         print("Developed by the SCA and Alter Net codes. All rights reserved.")
         print("This kernel may be reproduced if it meets the licenses terms. More info in the copyright command.")
-        print(f"Current SkyOS version: {version}")
+        print(f"Current SkyOS version: {valid_version}")
 
     elif command == "copyright":
         print("Copyright © 2024-2025 Alter Net codes and the SCA all rights reserved")
