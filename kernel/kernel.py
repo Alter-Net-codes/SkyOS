@@ -227,7 +227,8 @@ while True:
         print(treevalue)
 
     elif command == "app":
-        script_path = os.path.join(apps_dir, input("Enter the app name (with a .py): ").strip())
+        script_path = os.path.join(apps_dir, input("Enter the app name: ").strip())
+        script_path = script_path + ".py"  # PYTHON
         if os.path.isfile(script_path):
             try:
                 subprocess.run([sys.executable, script_path], check=True)
