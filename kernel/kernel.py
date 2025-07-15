@@ -3,11 +3,12 @@ import os
 import sys
 import platform
 import time
+import hashlib
 from datetime import datetime
 
-# FINAL UPDATE: get exit to work.
+# hashed password for secutity purposes.
 
-valid_version = "2.7"
+valid_version = "3.0"
 
 colors = {
     "sky_blue": "\033[38;5;39m",
@@ -39,7 +40,7 @@ def print_boot_screen():
 """
 
     print(colors["sky_blue"] + skyos_art + colors["reset"])
-    print(f"{colors['bright_magenta']}Loading SkyOS 2.7...{colors['reset']}")
+    print(f"{colors['bright_magenta']}Loading SkyOS 3.0...{colors['reset']}")
     time.sleep(5)
     os.system('cls' if platform.system() == "Windows" else 'clear')
     print(colors["clear"], end="")
@@ -101,7 +102,7 @@ def welcome():
         print(f"Good afternoon, {stored_username} welcome back.")
 
     print("Welcome back to SkyOS! Thank you to all those contributors who worked on this!")
-    print(f"{valid_version} written in Python3")
+    print(f"SkyOS {valid_version} written in Python 3.13.7")
     print("ALWAYS USE EXIT COMMAND TO EXIT THE OS, DO NOT CLOSE THE WINDOW!")
     print("For more info on the project type: info, help (commands) or copyright.")
     today = datetime.today()
@@ -134,8 +135,10 @@ if signed_in_status == "0":
     print_boot_screen()
     while not authenticated:
         password = input(f"Enter your password, {stored_username}: ").strip()
-
-        if password == stored_password:
+        # Hash the input password for comparison
+        hashed_input_password = hashlib.sha256(password.encode()).hexdigest()
+        # Compare the hashed input password with the stored hashed password
+        if hashed_input_password == stored_password:
             print(f"Welcome, {stored_username}!")
             authenticated = True
             welcome()
@@ -352,10 +355,6 @@ while True:
 
     elif command == "uname -c":
         print(f"Platform: {platform.platform()}")
-
-    elif command == "uname -v":
-        print(f"SkyOS version: {valid_version}")
-        print(f"Python version: {platform.python_version()}")
 
     elif command == "uname -h":
         print("Usage: uname [OPTION]...\n"
