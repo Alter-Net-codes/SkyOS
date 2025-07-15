@@ -1,5 +1,4 @@
 import os
-import subprocess
 import sys
 import logging
 import platform
@@ -75,30 +74,12 @@ def bios_app():
         elif answer == "leave":
             if ask_leave_bios():
                 log_and_print("Leaving BIOS and returning to kernel...", Colors.CYAN)
-
-                # Use absolute path based on this file's dir, to be safe
-                kernel_script = os.path.join(bios_dir, '..', 'kernel', 'kernel.py')
-                kernel_script = os.path.normpath(kernel_script)  # clean path
-
-                if os.path.isfile(kernel_script):
-                    try:
-                        subprocess.run([sys.executable, kernel_script], check=True)
-                    except subprocess.CalledProcessError as e:
-                        log_and_print(f"Error running kernel script: {e}", Colors.RED)
-                    except Exception as e:
-                        log_and_print(f"Unexpected error: {e}", Colors.RED)
-                else:
-                    log_and_print("Kernel script missing! Please reinstall SkyOS.", Colors.RED)
-                    kernelState = "gone"
-                break
+                sys.exit()
             else:
                 log_and_print("Stayed in BIOS.", Colors.YELLOW)
 
         else:
             log_and_print("Invalid command. Use 'info' or 'leave'.", Colors.RED)
-
-    if kernelState == "gone":
-        log_and_print("SkyOS kernel missing or corrupted. Reinstallation needed.", Colors.RED)
 
 if __name__ == "__main__":
     bios_app()
