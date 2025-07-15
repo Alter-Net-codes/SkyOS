@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import hashlib
 
 # Dev flag (set to False before release)
 dev = False
@@ -30,20 +31,18 @@ if os.path.isfile(username_file):
         os.remove(username_file)
         print("Username file deleted.")
     else:
-        print("Exiting setup...")
-        sys.exit(0)
+        sys.exit()
 
 if os.path.isfile(password_file):
     if todel == "yes":
         os.remove(password_file)
         print("Password file deleted.")
     else:
-        print("Exiting setup...")
-        sys.exit(0)
+        sys.exit()
 
 # Create new login info
 username = input("Enter new username: ")
-password = input("Enter new password: ")
+password = hashlib.sha256(input("Enter new password: ").encode()).hexdigest()
 
 with open(username_file, "w") as f:
     f.write(username)
