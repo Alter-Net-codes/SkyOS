@@ -1,21 +1,8 @@
 import os
-import subprocess
 import sys
 
 def exit_app():
-    this_dir = os.path.dirname(os.path.abspath(__file__))
-    kernel_script = os.path.join(this_dir, '..', 'kernel', 'kernel.py')
-    kernel_script = os.path.normpath(kernel_script)
-
-    if os.path.isfile(kernel_script):
-        try:
-            subprocess.run([sys.executable, kernel_script], check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Error executing the kernel script: {e}")
-        except Exception as e:
-            print(f"An unexpected error occurred: {e}")
-    else:
-        print("Kernel Script Not found or has a defect. Please reinstall SkyOS or replace the kernel file.")
+    sys.exit()
 
 def create_file(filename):
     with open(filename, 'w') as file:
