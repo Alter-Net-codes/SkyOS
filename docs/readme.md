@@ -1,6 +1,9 @@
 # SkyOS readme.md file
 SkyOS is a open-source operating system (with restrictions on the open-source part.) built for the Scratch Computing Alliance (SCA)
 
+# 388 days
+Since the start of this project on June 22nd, 2024 to the end of it, on July 15th 2025, we built an operating system simulation that helped hundreds start their own system projects, and helped us understand more about python, operating systems, and modules. This is not just a piece of software, and not a crappy os simulation nobody cares about, but a project. A community. A story. The story of SkyOS.
+
 ## Description
 An os built FROM SCRATCH! It's open-source and easy to contribute to
 because it is written in python, a very easy language to learn and program in.
