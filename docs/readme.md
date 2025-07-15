@@ -30,3 +30,6 @@ Install the newest python copy and then download the source code and run kernel.
 ### macOS
 Download the source code (You need to install newest python copy since macOS only comes pre-installed with python2) and run kernel.py:
  `python3 /Users/<username>/path/to/SkyOS/kernel/kernel.py`
+
+#### Hey!
+##### PSST! 135795.
