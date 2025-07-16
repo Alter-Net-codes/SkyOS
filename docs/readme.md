@@ -10,6 +10,7 @@ My dad, My freinds, The SCA and the SCA Community, All of the developers,
 + @G1aD05,
 + @ArtificialXDev,
 + @PearComputer,
+
 And so many other amazing people!
 
 ## Description
