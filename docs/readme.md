@@ -12,7 +12,6 @@ My dad, My freinds, The SCA and the SCA Community, All of the developers,
 + @PearComputer,
 And so many other amazing people!
 
-
 ## Description
 An os built FROM SCRATCH! It's open-source and easy to contribute to
 because it is written in python, a very easy language to learn and program in.
