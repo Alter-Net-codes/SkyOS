@@ -373,7 +373,7 @@ while True:
               "  -h, --help         display this help and exit")
     
     elif command == "license":
-        print("SkyOS is licensed under the MIT License.\n"
+        print("SkyOS is licensed under the BSD 3-Clause License.\n"
               "You are free to use, modify, and distribute this software as long as you include the original license text.\n"
               "For more details, please refer to the LICENSE file in the root directory.")
 
