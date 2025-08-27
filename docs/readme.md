@@ -1,5 +1,5 @@
 # SkyOS readme.md file
-SkyOS is a open-source operating system (with restrictions on the open-source part.) built for the Scratch Computing Alliance (SCA)
+SkyOS is a open-source operating system built for and with the Scratch Computing Alliance (SCA)
 
 # SkyOS Aurora
 SkyOS Aurora is the continued version of SkyOS. This will have plenty new features, plus some updated kernel software and more! 
