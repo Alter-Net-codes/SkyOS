@@ -2,7 +2,7 @@
 SkyOS is a open-source operating system built for and with the Scratch Computing Alliance (SCA)
 
 # SkyOS Aurora
-SkyOS Aurora is the continued version of SkyOS. This will have plenty new features, plus some updated kernel software and more! 
+SkyOS Aurora is the continued version of SkyOS. This will have plenty new features, plus some updated kernel software and more! View [here](https://github.com/Alter-Net-codes/SkyOS-Aurora/)
 
 # 388 days
 9312 hours, 558,200 minutes, 33,523,200 seconds. That much time. Has passed since the start of this project on June 22nd, 2024 to the end of it, on July 15th 2025, we built an operating system simulation that helped hundreds start their own system projects, and helped us understand more about python, operating systems, and modules. This is not just a piece of software, and not a crappy os simulation nobody cares about, but a project. A community. A story. The story of SkyOS.
