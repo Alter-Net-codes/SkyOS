@@ -58,11 +58,6 @@ print("Launching kernel...")
 
 # Launch the kernel
 if os.path.isfile(kernel_script):
-    try:
-        subprocess.run([sys.executable, kernel_script], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Kernel exited with error: {e}")
-    except Exception as e:
-        print(f"Unexpected error: {e}")
+    sys.exit()
 else:
-    print("Kernel script not found. Make sure it exists at .\\kernel\\kernel.py")
+    print("Kernel script not found. Make sure it exists at .\kernel\kernel.py")
