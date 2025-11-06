@@ -20,7 +20,7 @@ import urllib.request
 # Installers and stuff will soon be suported.
 # okay well i am now doing this as a class project so i guess i have motivation now, uhhh lets go!
 
-valid_version = "1.1.09s2725"
+valid_version = "1.2.0"
 
 colors = {
     "sky_blue": "\033[38;5;39m",
