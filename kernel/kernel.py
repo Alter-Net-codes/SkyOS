@@ -97,11 +97,14 @@ path_location = os.path.join(root_path, 'path.txt')
 skypkg_path = os.path.join(root_path, "skypkg", "skypkg.py")
 
 # write all the programs launchers or 1fileapps to the path file
-open(path_location, 'w').close()  # Clear the file first
-for app in os.listdir(apps_dir):
-    with open(path_location, 'a') as path_file:
-        # now avoids writing folders for multi file apps, and writes only 1fileapps and launchers.
-        path_file.write(f"{os.path.join(apps_dir, app)}\n")
+def write_path_file():
+    open(path_location, 'w').close()  # Clear the file first
+    for app in os.listdir(apps_dir):
+        with open(path_location, 'a') as path_file:
+            # now avoids writing folders for multi file apps, and writes only 1fileapps and launchers.
+            path_file.write(f"{os.path.join(apps_dir, app)}\n")
+
+write_path_file()
 
 def run_setup():
     if os.path.isfile(setup_script_path):
@@ -454,6 +457,7 @@ while True:
         full_command = f'py "{skypkg_path}" {command[len("skypkg "):]}'
         # Run SkyPKG as a subprocess and print its output live
         subprocess.run(full_command, shell=True)
+        write_path_file()  # Update path file after running skypkg
 
     else:
         print(f"{RED}{command} is not a valid command or executable. Type 'help' for a list of commands.{RESET}")
